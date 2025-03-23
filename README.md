@@ -11,6 +11,9 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 > You can use this section of the file to keep notes about your project as you work on it.
 
+1. Trying to create a base structure for my quiz/code. Trying to figure out how I can connect
+arrays to buttons and show the buttons dynamically and the questions as well.
+
 # Project Summary
 
 > Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 

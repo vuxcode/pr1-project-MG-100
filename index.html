@@ -1,24 +1,49 @@
 <!-- Start writing your project code in this file! -->
+
+<h1> This is a quiz </h1>
+
 <script>
 
-// Starting with creating arrays for questions, answers and correct answers
-// Might change the questions/answers later
+// Starting with creating arrays for questions, options and correct options
+// Trying to figure out still on how to make it work.
 
+// Questions (going to change them and add more later once I have gotten farther)
+// Simple questions to begin with as "placeholders" for testing
 var questions = [
-    ""
+    "What is one plus one?",
+    "What is two plus two?",
+    "What is five plus two?",
+    "What is three plus three",
+    "What is seven plus one?"
 ];
 
-var answers = [
-    ""
-];
+// (Trying to figure out how to connect arrays to buttons with a for loop)
+// Options to choose between, 4 for options for each question.
+var answers = ["Three", "Two", "Four", "One"];
 
-var correct = answers = [
-    ""
-];
+// Correct options here (I want the buttons with the correct answers to go here)
+var correctAnswers = [2, 4, 7, 6, 8];
 
-// Variable for a score counter
+// Score counter here (score++ if an answer is correct)
 var score = 0;
 
 
-    
+// Trying a for loop
+for (var i = 0; i < questions.length; i++){
+    console.log(questions[i]);
+    // Assigning questions[i] to correctAnswers[i]
+    if (questions[i] = correctAnswers[i]){
+        // Testing if it gives an output
+        console.log("Correct! Your answer is: " + correctAnswers[i]);
+        console.log("Current score:" + score);
+        score++;
+        // Empty string to make it easier to see each answer
+        console.log("");
+    }
+    else {
+        console.log("Incorrect.");
+    }
+}
+
+
 </script>

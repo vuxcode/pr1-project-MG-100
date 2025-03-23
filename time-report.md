@@ -6,3 +6,13 @@ For example:
 
 - 2022-10-24 18:00 Worked for 1 hour.
   - *List the things you have done.*
+
+- 2025-03-23 15:00 worked for around two hours. List of things I did:
+1. Built the base further and plenty of experimenting. Thinking what functions I can make use of and how.
+2. Changed some arrays.
+3. Added questions to the arrays and correctAnswers.
+4. Worked on figuring out how to loop through both.
+5. Trying to think about the next steps on how to turn them into buttons -
+that works and I also need buttons for incorrect answers.
+6. Reading through notes again and forgot to log my time yesterday -
+but I was experimenting for a couple of hours with loops and
