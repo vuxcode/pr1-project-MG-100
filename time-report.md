@@ -19,6 +19,9 @@ but I was experimenting for a couple of hours with loops.*
 
 2025-03-24 10:15-11:45
 1. I went to the workshop lesson but forgot to upload my new code to the repository but it's saved on the school computer.
-2. I got some help to fix a problem with my for loop, created a button as a test, moved the score++ so it outputs 1
+2. I got some help to fix a problem with my for loop, created a button as a test, moved the score++ so it outputs 1.
 if the first question is correct instead of 0.
 3. Changed a few things in the code at home too quickly and I'm gonna try to get further. Reading notes and experimenting a bit on the side of the main project.
+
+2025-03-25 around 15:00 for a short time
+1. I was busy with my other course today, but I thought about using boolean values true/false for my quiz questions.
