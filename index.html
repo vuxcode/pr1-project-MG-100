@@ -12,22 +12,30 @@ var output = document.getElementById("question")
 
 // I think I want to use boolean values for my questions that are correct and incorrect, either just using "false/true or 0 and 1"
 
-// Simple questions to begin with as "placeholders" for testing
-var questions = [
-    "What is one plus one?",
-    "What is two plus two?",
-];
-
 // Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
 
 // Index starting from 0 here to output first question (questions[0] and then questions[1]) 
 var index = 0;
 
-// Gonna test with less code/text now to see if I can output each question at a time per click on the button as a step forward
-// 0 < 2 currently
+// Simple questions to begin with as "placeholders" for testing
+var questions = [
+    "What is one plus one?",
+    "What is two plus two?",
+];
+
+// Making the function (quizQuestions) so it connects to the button
+
+function quizQuestions(){
 if (index < questions.length){
-output += questions;
+output.innerHTML = "";
+output.innerHTML += questions[index];
+index++;
+}
+// After it reaches the final index number?
+else {
+output.innerHTML = "Quiz over";
+}
 }
 
 
