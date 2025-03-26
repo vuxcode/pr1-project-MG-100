@@ -13,6 +13,7 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 1. Trying to create a base structure for my quiz/code. Trying to figure out how I can connect
 arrays to buttons and show the buttons dynamically and the questions as well.
+2. 2025/03/26 removed some of the code to test more things one step at a time and trying to make it less confusing for myself.
 
 # Project Summary
 

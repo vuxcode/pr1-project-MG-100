@@ -21,3 +21,5 @@ but I was experimenting for a couple of hours with loops and
 1. Working on the concept of my code
 2. Thinking about re-doing some of it to understand it better.
 3. Reading through notes again.
+4. 2025-03-26 around 21:30-22:00.
+5. Removed some things in the code to test more things and try to understand it easier/better. Trying different things in steps.

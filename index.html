@@ -6,56 +6,25 @@
 <script>
 
 var button1 = document.getElementById("button1");
-button1.addEventListener("click", questionsHere);
+button1.addEventListener("click", quizQuestions);
 
 var output = document.getElementById("question")
 
-// I think I want to use boolean values for my questions that are correct and incorrect
+// I think I want to use boolean values for my questions that are correct and incorrect, either just using "false/true or 0 and 1"
 
-// Questions (going to change them and add more later once I have gotten farther)
 // Simple questions to begin with as "placeholders" for testing
-
 var questions = [
     "What is one plus one?",
     "What is two plus two?",
 ];
 
-// (Trying to figure out how to connect arrays to buttons with a for loop)
-// Options to choose between, 4 for options for each question.
-var answers = [
-    "Three", "Two", "Four", "One",
-    "Four", "Six", "Five", "Three"
-];
-
-// Correct options here (I want the buttons with the correct answers to go here)
-var correctAnswers = [
-    0, 1, 0, 0,
-    1, 0, 0, 0
-];
-
-// Score counter here (score++ if an answer is correct)
+// Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
 
-// Start of function
-function questionsHere(input){
-    var i = 0;
-    // Trying a for loop
-    // for (var i = 0; i < questions.length; i++)
-    // COLIN: IS CREATING THE VARIABLE HERE GOING TO CREATE A PROBLEM? BECAUSE IT WILL RESET THE QUESTION TO ZERO EACH TIME THE USER CLICKS THE BUTTON
-    console.log(questions[i]);
-    // COLIN: I THINK YOU WANT TO STOP AND ASK THE USER FOR THEIR ANSWER HERE, MAYBE!?
-    document.getElementById("question");
-    
-    if (questions[i]){
-        // Testing if it gives an output
-        output.innerHTML += questions[i];
-        console.log("Correct! Your answer is: " + correctAnswers[i]);
-        console.log("Current score:" + score);
-        // Empty string to make it easier to see each answer
-        console.log(""); }
-        
-        else {
-        console.log("Incorrect."); }
-}
+// Index starting from 0 here to output first question (questions[0] and then questions[1]) 
+var index = 0;
+
+// Gonna test with less code/text now to see if I can output each question at a time per click on the button as a step forward
+
 
 </script>
