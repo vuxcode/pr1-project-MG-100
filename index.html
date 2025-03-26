@@ -1,57 +1,61 @@
 <!-- Start writing your project code in this file! -->
-
 <h1> This is a quiz </h1>
 <h1 id="question"></h1>
+<button id="button1">Test</button>
 
 <script>
 
+var button1 = document.getElementById("button1");
+button1.addEventListener("click", questionsHere);
 
-// I was studying for another course and came to the idea of using Boolean values for
-// Correct questions and incorrect questions like Boolean(1) and Boolean(0)
+var output = document.getElementById("question")
 
-
-
-// Starting with creating arrays for questions, options and correct options
-// Trying to figure out still on how to make it work.
+// I think I want to use boolean values for my questions that are correct and incorrect
 
 // Questions (going to change them and add more later once I have gotten farther)
 // Simple questions to begin with as "placeholders" for testing
+
 var questions = [
     "What is one plus one?",
     "What is two plus two?",
-    "What is five plus two?",
-    "What is three plus three",
-    "What is seven plus one?"
 ];
 
 // (Trying to figure out how to connect arrays to buttons with a for loop)
 // Options to choose between, 4 for options for each question.
-var answers = ["Three", "Two", "Four", "One"];
+var answers = [
+    "Three", "Two", "Four", "One",
+    "Four", "Six", "Five", "Three"
+];
 
 // Correct options here (I want the buttons with the correct answers to go here)
-var correctAnswers = [2, 4, 7, 6, 8];
+var correctAnswers = [
+    0, 1, 0, 0,
+    1, 0, 0, 0
+];
 
 // Score counter here (score++ if an answer is correct)
 var score = 0;
 
-var output = document.getElementById("question");
-
-
-// Trying a for loop
-for (var i = 0; i < questions.length; i++){
-    // 
+// Start of function
+function questionsHere(input){
+    var i = 0;
+    // Trying a for loop
+    // for (var i = 0; i < questions.length; i++)
+    // COLIN: IS CREATING THE VARIABLE HERE GOING TO CREATE A PROBLEM? BECAUSE IT WILL RESET THE QUESTION TO ZERO EACH TIME THE USER CLICKS THE BUTTON
+    console.log(questions[i]);
+    // COLIN: I THINK YOU WANT TO STOP AND ASK THE USER FOR THEIR ANSWER HERE, MAYBE!?
+    document.getElementById("question");
+    
     if (questions[i]){
-        score++;
         // Testing if it gives an output
+        output.innerHTML += questions[i];
         console.log("Correct! Your answer is: " + correctAnswers[i]);
         console.log("Current score:" + score);
         // Empty string to make it easier to see each answer
-        console.log("");
-    }
-    else {
-        console.log("Incorrect.");
-    }
+        console.log(""); }
+        
+        else {
+        console.log("Incorrect."); }
 }
-
 
 </script>
