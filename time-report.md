@@ -31,3 +31,7 @@ but I was experimenting for a couple of hours with loops and
 25-03-26 22:15-22:30
 1. Fiddled with the code for a bit and in the end I managed to create a function that removes the previous question and outputs the next one.
 2. Improved it a bit more, hopefully going to take this further and try to find out how I can have multiple buttons for EACH question!
+
+25-03-30 16:30-17:15
+1. I was busy for some days but during those days I spent a few hours reading notes and watching some video tutorials.
+2. Trying to take the quiz further and figure out how I can connect correct/incorrect answers for each question now.

@@ -1,7 +1,7 @@
 <!-- Start writing your project code in this file! -->
 <h1> This is a quiz </h1>
 <h1 id="question"></h1>
-<button id="button1">Test</button>
+<button id="button1">Start quiz</button>
 
 <script>
 
@@ -31,6 +31,9 @@ if (index < questions.length){
 output.innerHTML = "";
 output.innerHTML += questions[index];
 index++;
+// (Might remove score++ from here later for correct answers only but testing it)
+score++;
+console.log(score);
 }
 // After it reaches the final index number?
 else {
