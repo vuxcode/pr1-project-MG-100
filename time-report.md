@@ -35,3 +35,5 @@ but I was experimenting for a couple of hours with loops and
 25-03-30 16:30-17:15
 1. I was busy for some days but during those days I spent a few hours reading notes and watching some video tutorials.
 2. Trying to take the quiz further and figure out how I can connect correct/incorrect answers for each question now.
+25-03-30 17:15-18:00
+1. Thinking how I'm gonna put buttons for each question and testing parameter in a function which I think will help assigning correct answers. Reading some of the notes again too.
