@@ -1,7 +1,8 @@
 <!-- Start writing your project code in this file! -->
+
 <h1> This is a quiz </h1>
 <h1 id="question"></h1>
-<button id="button1">Test</button>
+<button id="button1">test</button>
 
 <script>
 
@@ -9,8 +10,6 @@ var button1 = document.getElementById("button1");
 button1.addEventListener("click", quizQuestions);
 
 var output = document.getElementById("question");
-
-// I think I want to use boolean values for my questions that are correct and incorrect, either just using "false/true or 0 and 1"
 
 // Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
@@ -31,30 +30,23 @@ var answer1 = ["1", "2"];
 var correctAnswer = ["2"];
 
 
-// Making the function (quizQuestions) so it connects to the button
+// Making the function (quizQuestions)
 function quizQuestions(){
 if (index < questions.length){
 output.innerHTML = "";
 output.innerHTML += questions[index];
 index++;
-// (Might remove score++ from here later for correct answers only but testing it)
-score++;
-console.log(score);
 }
 // After it reaches the final index number
 else {
-output.innerHTML = "Quiz over";
+output.innerHTML = "Quiz over!";
 }
 }
 
 // I need another function for the buttons and try to get an output for the correct/incorrect button
-// Testing to use a parameter as a variable like in the beginning
 
-function parameter(test) {
-var test = "test";
-console.log("This is a test: " + test);
-}
-parameter();
-
+// Changed the code around testing different things and to output the first question directly
+// I am using the quizQuestions function here (still not connected to any correct/incorrect answers)
+quizQuestions();
 
 </script>

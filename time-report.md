@@ -37,3 +37,5 @@ but I was experimenting for a couple of hours with loops and
 2. Trying to take the quiz further and figure out how I can connect correct/incorrect answers for each question now.
 25-03-30 17:15-18:00
 1. Thinking how I'm gonna put buttons for each question and testing parameter in a function which I think will help assigning correct answers. Reading some of the notes again too.
+25-03-30 18:00-18:40
+1. Removed some text in the code and made the first question appear directly. Working on connecting them to buttons.
