@@ -42,3 +42,9 @@ but I was experimenting for a couple of hours with loops and
 
 2025-04-02 12:30-14:00
 1. Spent time changing a few things in the code/experimented and asked for some suggestions.
+
+25-04-02 16:00-19:00
+1. Experimented with the code for a while, read through the notes for the 'Buttons' lesson while working on it.
+2. Added 4 buttons and IDs to them to start working out and experimenting on how to connect them to questions (answers and correct answers too)
+3. I moved around my variables/IDs to make the code look better and easier to read for myself and some spacing. It took me a while.
+4. Thinking about using the 'display properties' to hide the starting button for example once it has been pressed...

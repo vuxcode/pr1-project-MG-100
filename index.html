@@ -2,52 +2,59 @@
 
 <h1> This is a quiz </h1>
 
-<h1 id="question"></h1>
+<h1 id="questions"></h1>
 <h1 id="scoreOutput"></h1>
-<button id="startButton">test</button>
 
-<button onclick="quizQuestions()">quiz start?</button>
+<button id="startQuiz">Start quiz</button>
+<button id="button1">1</button>
+<button id="button2">2</button>
+<button id="button3">3</button>
+<button id="button4">4</button>
 
 <script>
-
-var startButton = document.getElementById("startButton");
-startButton.addEventListener("click", quizQuestions);
-
-//outputs
-var output = document.getElementById("question");
-var scoreOutput = document.getElementById("scoreOutput");
+// Start quiz button
+var startQuiz = document.getElementById("startQuiz");
+startQuiz.addEventListener("click", quizQuestions);
+// Added buttons and IDs to start working out on how to connect them to each question (might need more later)
+var button1 = document.getElementById("button1");
+var button2 = document.getElementById("button2");
+var button3 = document.getElementById("button3");
+var button4 = document.getElementById("button4");
 
 // Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
-
 // Index starting from 0 here to output first question (questions[0] and then questions[1]) 
 var index = 0;
 
-// Simple questions to begin with as "placeholders" for testing
+//outputs for questions and score
+var output = document.getElementById("questions");
+// Need to use scoreOutput later in the code for correct answers
+var scoreOutput = document.getElementById("scoreOutput");
+
+// questions (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
     "What is one plus one?",
     "What is two plus two?"
 ];
 
-// Gonna try to create array for answers and correct answers again
+// all answers and correct answers for the current questions
+var answer1 = ["1", "2", "6", "3"];
+var answer2 = ["4", "1", "3", "5"];
 
-var answer1 = ["1", "2"];
+var correctAnswers = ["2", "4"];
 
-var correctAnswer = ["2", "4"];
-
-
-// Making the function (quizQuestions)
-function quizQuestions(){
-if (index < questions.length){
-output.innerHTML = questions[index];
-index++;
-scoreOutput.innerHTML = "Score: " + score++;
+// Start of the function (quizQuestions)
+function quizQuestions() {
+if (index < questions.length) {
+    output.innerHTML = questions[index];
+    index++;
 }
 // After it reaches the final index number
 else {
-output.innerHTML = "Quiz over!";
+    output.innerHTML = "Quiz is over!"
 }
 }
+//End of this function
 
 
 </script>
