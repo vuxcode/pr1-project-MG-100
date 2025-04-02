@@ -1,15 +1,21 @@
 <!-- Start writing your project code in this file! -->
 
 <h1> This is a quiz </h1>
+
 <h1 id="question"></h1>
-<button id="button1">test</button>
+<h1 id="scoreOutput"></h1>
+<button id="startButton">test</button>
+
+<button onclick="quizQuestions()">quiz start?</button>
 
 <script>
 
-var button1 = document.getElementById("button1");
-button1.addEventListener("click", quizQuestions);
+var startButton = document.getElementById("startButton");
+startButton.addEventListener("click", quizQuestions);
 
+//outputs
 var output = document.getElementById("question");
+var scoreOutput = document.getElementById("scoreOutput");
 
 // Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
@@ -20,22 +26,26 @@ var index = 0;
 // Simple questions to begin with as "placeholders" for testing
 var questions = [
     "What is one plus one?",
-    "What is two plus two?",
+    "What is two plus two?"
 ];
 
 // Gonna try to create array for answers and correct answers again
-// Testing with 2 answers first and I want 4 buttons for each question later with 1 correct one
+
 var answer1 = ["1", "2"];
 
-var correctAnswer = ["2"];
+var correctAnswer = ["2", "4"];
 
 
 // Making the function (quizQuestions)
 function quizQuestions(){
 if (index < questions.length){
+    // COLIN: WHY DO YOU NEED THE NEXT LINE?
 output.innerHTML = "";
-output.innerHTML += questions[index];
+
+output.innerHTML = questions[index];
 index++;
+
+scoreOutput.innerHTML = "Score: " + score++;
 }
 // After it reaches the final index number
 else {
@@ -43,10 +53,5 @@ output.innerHTML = "Quiz over!";
 }
 }
 
-// I need another function for the buttons and try to get an output for the correct/incorrect button
-
-// Changed the code around testing different things and to output the first question directly
-// I am using the quizQuestions function here (still not connected to any correct/incorrect answers)
-quizQuestions();
 
 </script>
