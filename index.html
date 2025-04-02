@@ -39,12 +39,8 @@ var correctAnswer = ["2", "4"];
 // Making the function (quizQuestions)
 function quizQuestions(){
 if (index < questions.length){
-    // COLIN: WHY DO YOU NEED THE NEXT LINE?
-output.innerHTML = "";
-
 output.innerHTML = questions[index];
 index++;
-
 scoreOutput.innerHTML = "Score: " + score++;
 }
 // After it reaches the final index number
