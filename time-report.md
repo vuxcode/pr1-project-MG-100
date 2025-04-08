@@ -68,3 +68,5 @@ For example:
 2. *Added EventListeners to each button.*
 - 25-04-08 13:20-13:43
 1. *Tested innerText for buttons and other experimenting.*
+- 25-04-08 18:00-18:30
+1. *Have some problems with my code now and the buttons, so I might go back to the previous version and work from there, but I think I am starting to get the idea to continue! Experimenting.*

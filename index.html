@@ -57,12 +57,13 @@ var correctAnswers = ["2", "4"];
 // Start of the function (quizQuestions)
 
 hideButtons();
+
 function quizQuestions() {
 if (index < questions.length) {
-    output.innerHTML = questions[index];
+    output.innerHTML = questions[0];
     index++;
     showButtons();
-    button1.innerText = "Test";
+    button1.innerText = answers;
     startQuiz.style.display = "none";
 }
 
@@ -98,12 +99,10 @@ scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 
 
 
-
 // Checking that they have the same length. I think I can work with the Index easier then.
-console.log("Correct answers: " + correctAnswers.length);
-console.log("Answers: " + answers.length);
-console.log("Questions:" + questions.length);
-
+console.log("CorrectAnswers.length: " + correctAnswers.length);
+console.log("answers.length: " + answers.length);
+console.log("Questions.length: " + questions.length);
 
 
 </script>
