@@ -12,3 +12,5 @@
 1. Might not be a bug but when I press the button, the score doesn't increase from 1 to 2. It stays 1 but in the console it shows 2.
 2. Same day around 19:00 - I changed the name of an ID above the script tags from question to questions and forgot to change the variable,
 so some kind of error occurred.
+
+25-04-08 13:50. My buttons appear stacked on top of each other after clicking on the start quiz button.

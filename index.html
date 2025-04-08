@@ -6,10 +6,10 @@
 <h1 id="scoreOutput"></h1>
 
 <button id="startQuiz">Start quiz</button>
-<button id="button1">1</button>
-<button id="button2">2</button>
-<button id="button3">3</button>
-<button id="button4">4</button>
+<button id="button1"></button>
+<button id="button2">4</button>
+<button id="button3">5</button>
+<button id="button4">6</button>
 
 <script>
 // Start quiz button
@@ -20,6 +20,10 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
+button1.addEventListener("click", quizQuestions);
+button2.addEventListener("click", quizQuestions);
+button3.addEventListener("click", quizQuestions);
+button4.addEventListener("click", quizQuestions);
 
 
 
@@ -50,36 +54,55 @@ var answers = [
 
 // list of correct answers
 var correctAnswers = ["2", "4"];
-
 // Start of the function (quizQuestions)
+
+hideButtons();
 function quizQuestions() {
 if (index < questions.length) {
     output.innerHTML = questions[index];
     index++;
+    showButtons();
+    button1.innerText = "Test";
+    startQuiz.style.display = "none";
 }
 
 else {
     output.innerHTML = "Quiz is over!"
-    toggleButtons();
+    hideButtons();
     showScore();
 }
 }
 //End of this function
 
 
-
 // function to hide the buttons
-function toggleButtons() {
-button1.style.display = "none";
-button2.style.display = "none";
-button3.style.display = "none";
-button4.style.display = "none";
+function hideButtons() {
+    button1.style.display = "none";
+    button2.style.display = "none";
+    button3.style.display = "none";
+    button4.style.display = "none";
+}
+// function to make the buttons appear again for restarting quiz later
+function showButtons() {
+    button1.style.display = "block";
+    button2.style.display = "block";
+    button3.style.display = "block";
+    button4.style.display = "block";
 }
 
 // function to show the score at some point (if it's correct)
 function showScore() {
 scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 }
+
+
+
+
+
+// Checking that they have the same length. I think I can work with the Index easier then.
+console.log("Correct answers: " + correctAnswers.length);
+console.log("Answers: " + answers.length);
+console.log("Questions:" + questions.length);
 
 
 
