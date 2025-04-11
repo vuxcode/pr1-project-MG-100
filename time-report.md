@@ -70,3 +70,10 @@ For example:
 1. *Tested innerText for buttons and other experimenting.*
 - 25-04-08 18:00-18:30
 1. *Have some problems with my code now and the buttons, so I might go back to the previous version and work from there, but I think I am starting to get the idea to continue! Experimenting.*
+
+
+
+- 2025-04-11 16:15:16:45
+1. *Feeling stuck right now on what to do and my buttons are now alligned vertically. I am trying to fix that otherwise I will*
+*try to return to the previous version.*
+2. *Thinking about making the functions a bit different*
