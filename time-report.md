@@ -83,3 +83,6 @@ For example:
 - 2025-04-12 17:00-18:00
 1. *I read through some notes, tested different things and changed the name of some functions/element IDs.*
 2. *Feel like I am struggling but hope I can make a breakthrough soon that makes it more functional. Watching videos as well for inspiration.*
+- 2025-04-12 18:15-18:30
+1. *I sort of fixed the issue after changing name of the startQuiz function and IDs along with the start variable.*
+2. *Forgot to add that I created a function called "nextQuestion" in the previous version and I want it to work with the buttons after clicking on the start button.*

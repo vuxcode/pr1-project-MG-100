@@ -13,8 +13,8 @@
 
 <script>
 // Start quiz button
-var startQuiz = document.getElementById("start");
-startQuiz.addEventListener("click", startQuiz);
+var start = document.getElementById("start");
+start.addEventListener("click", startQuiz);
 // Added buttons and IDs to start working out on how to connect them to each question (might need more later)
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
@@ -57,14 +57,13 @@ var correctAnswers = ["2", "4"];
 // Which is what I want
 hideButtons();
 
-
 // Start of the function (quizQuestions)
 function startQuiz() {
 if (index < questions.length) {
     output.innerHTML = questions[index];
     index++;
     showButtons();
-    startQuiz.style.display = "none";
+    start.style.display = "none";
 }
 
 else {

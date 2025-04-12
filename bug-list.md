@@ -16,3 +16,4 @@ so some kind of error occurred.
 - 25-04-08 13:50. *My buttons appear stacked on top of each other after clicking on the start quiz button.*
 
 - 25-04-12 17:00-18:00. *I changed name of the function "quizQuestions" to "startQuiz" because I want that to be the function to start it. However, now nothing happens when I click on it. I am trying to fix it and checking that the IDs are correct etc.*
+- 25-04-12 18:15-18:30. *I fixed the problem and now it does start again when I click on start but the 4 other buttons for answers are not connected yet to questions/correctAnswers*
