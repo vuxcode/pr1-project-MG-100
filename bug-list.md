@@ -13,4 +13,6 @@
 2. Same day around 19:00 - I changed the name of an ID above the script tags from question to questions and forgot to change the variable,
 so some kind of error occurred.
 
-25-04-08 13:50. My buttons appear stacked on top of each other after clicking on the start quiz button.
+- 25-04-08 13:50. *My buttons appear stacked on top of each other after clicking on the start quiz button.*
+
+- 25-04-12 17:00-18:00. *I changed name of the function "quizQuestions" to "startQuiz" because I want that to be the function to start it. However, now nothing happens when I click on it. I am trying to fix it and checking that the IDs are correct etc.*

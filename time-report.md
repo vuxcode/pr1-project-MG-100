@@ -77,3 +77,9 @@ For example:
 1. *Feeling stuck right now on what to do and my buttons are now alligned vertically. I am trying to fix that otherwise I will*
 *try to return to the previous version.*
 2. *Thinking about making the functions a bit different*
+
+
+
+- 2025-04-12 17:00-18:00
+1. *I read through some notes, tested different things and changed the name of some functions/element IDs.*
+2. *Feel like I am struggling but hope I can make a breakthrough soon that makes it more functional. Watching videos as well for inspiration.*

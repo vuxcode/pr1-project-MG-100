@@ -5,7 +5,7 @@
 <h1 id="questions"></h1>
 <h1 id="scoreOutput"></h1>
 
-<button id="startQuiz">Start quiz</button>
+<button id="start">Start quiz</button>
 <button id="button1">1</button>
 <button id="button2">2</button>
 <button id="button3">3</button>
@@ -13,17 +13,17 @@
 
 <script>
 // Start quiz button
-var startQuiz = document.getElementById("startQuiz");
-startQuiz.addEventListener("click", quizQuestions);
+var startQuiz = document.getElementById("start");
+startQuiz.addEventListener("click", startQuiz);
 // Added buttons and IDs to start working out on how to connect them to each question (might need more later)
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
-button1.addEventListener("click", quizQuestions);
-button2.addEventListener("click", quizQuestions);
-button3.addEventListener("click", quizQuestions);
-button4.addEventListener("click", quizQuestions);
+button1.addEventListener("click", startQuiz);
+button2.addEventListener("click", startQuiz);
+button3.addEventListener("click", startQuiz);
+button4.addEventListener("click", startQuiz);
 
 
 
@@ -38,32 +38,28 @@ var output = document.getElementById("questions");
 var scoreOutput = document.getElementById("scoreOutput");
 
 
-
-
 // questions (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
     "What is one plus one?",
     "What is two plus two?"
 ];
 
-// all answers and correct answers for the current questions
+// all answers
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"]
 ];
 
-// list of correct answers
+// all correct answers
 var correctAnswers = ["2", "4"];
 
 // Might move this function 'hideButtons()' later but it makes the 'start' button disappear from the screen if I click it
 // Which is what I want
 hideButtons();
 
-// Feeling very stuck right now and I don't understand why the buttons now align vertically? I am trying to solve it
-// And I am pretty sure the previous version didn't have it. It's not a big issue though, I have to connect the buttons
 
 // Start of the function (quizQuestions)
-function quizQuestions() {
+function startQuiz() {
 if (index < questions.length) {
     output.innerHTML = questions[index];
     index++;
@@ -78,6 +74,15 @@ else {
 }
 }
 //End of this function
+
+// Gonna attempt to make a function that checks the users input/specific button clicked and score++ if it's correct
+// And move to the next question.
+function nextQuestion(userInput) {
+    if (userInput == correctAnswers) {
+        score++;
+    }
+}
+
 
 
 // function to hide the buttons
