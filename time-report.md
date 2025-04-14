@@ -86,3 +86,9 @@ For example:
 - 2025-04-12 18:15-18:30
 1. *I sort of fixed the issue after changing name of the startQuiz function and IDs along with the start variable.*
 2. *Forgot to add that I created a function called "nextQuestion" in the previous version and I want it to work with the buttons after clicking on the start button.*
+
+
+- 2025-04-15 23:30-00:20
+1. Added answers to my buttons (text) using innerText, index variable and the index number for each button.
+2. Working on the next function with the parameter "userInput" to track which button was pressed if I can do it correctly. Some progress made!
+3. Changed name for a function. Also read some lesson notes.
