@@ -92,3 +92,10 @@ For example:
 1. Added answers to my buttons (text) using innerText, index variable and the index number for each button.
 2. Working on the next function with the parameter "userInput" to track which button was pressed if I can do it correctly. Some progress made!
 3. Changed name for a function. Also read some lesson notes.
+
+
+
+- 2025-04-22 20:00-21:15
+1. I have been busy during Easter and had to prepare for a math test.
+2. I spent a couple of hours reading through the notes and built some functions for testing/learning in smaller programs.
+3. Spent time reading my code again and trying to decide what to do next and how to make the buttons move to the next question.
