@@ -11,6 +11,8 @@
 <button id="button3"></button>
 <button id="button4"></button>
 
+
+<!-- start of the script -->
 <script>
 // Start quiz button
 var start = document.getElementById("start");
@@ -54,8 +56,8 @@ var answers = [
 // Reminder for myself next time: make the correct answer be written exactly as the answer so double equal sign '==' works to compare them
 var correctAnswers = ["Two", "Four"];
 
-// Might move this function 'hideButtons()' later but it makes the 'start' button disappear from the screen if I click it
-// Which is what I want
+
+// Hiding the 'answer' buttons in the beginning
 hideButtons();
 
 // Start of the function (quizQuestions)
@@ -63,12 +65,15 @@ function startQuiz() {
 if (index < questions.length) {
     output.innerHTML = questions[index];
     // Trying to make the answers appear for the buttons
+    showButtons();
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
     button4.innerText = answers[index][3];
-    showButtons();
+    //showButtons();
     start.style.display = "none";
+    index++;
+    quizQuestions();
 }
 
 else {
@@ -86,7 +91,6 @@ function quizQuestions(userInput) {
         score++;
     }
 }
-
 
 
 // function to hide the buttons
@@ -110,7 +114,7 @@ scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 }
 
 
-// Checking that they have the same length. I think I can work with the Index easier then.
+// Checking the .length of these arrays
 console.log("CorrectAnswers.length: " + correctAnswers.length);
 console.log("answers.length: " + answers.length);
 console.log("Questions.length: " + questions.length);

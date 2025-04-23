@@ -13,7 +13,9 @@
 2. Same day around 19:00 - I changed the name of an ID above the script tags from question to questions and forgot to change the variable,
 so some kind of error occurred.
 
-- 25-04-08 13:50. *My buttons appear stacked on top of each other after clicking on the start quiz button.*
+- 2025-04-08 13:50. *My buttons appear stacked on top of each other after clicking on the start quiz button.*
 
-- 25-04-12 17:00-18:00. *I changed name of the function "quizQuestions" to "startQuiz" because I want that to be the function to start it. However, now nothing happens when I click on it. I am trying to fix it and checking that the IDs are correct etc.*
-- 25-04-12 18:15-18:30. *I fixed the problem and now it does start again when I click on start but the 4 other buttons for answers are not connected yet to questions/correctAnswers*
+- 2025-04-12 17:00-18:00. *I changed name of the function "quizQuestions" to "startQuiz" because I want that to be the function to start it. However, now nothing happens when I click on it. I am trying to fix it and checking that the IDs are correct etc.*
+- 2025-04-12 18:15-18:30. *I fixed the problem and now it does start again when I click on start but the 4 other buttons for answers are not connected yet to questions/correctAnswers*
+
+- 2025-04-23 15:30-15:40 *Trying to make my quiz function properly. If I put the function 'quizQuestions() at the bottom of the other function 'startQuiz' the score in the end stays at 1 no matter what buttons were clicked. Trying to fix it. Also still have no clue yet on how to make the buttons appear horizontally instead of vertically but that still looks fine to me.*

@@ -99,3 +99,9 @@ For example:
 1. I have been busy during Easter and had to prepare for a math test.
 2. I spent a couple of hours reading through the notes and built some functions for testing/learning in smaller programs.
 3. Spent time reading my code again and trying to decide what to do next and how to make the buttons move to the next question.
+
+
+- 2025-04-23 around 14:45-15:30
+1. *Testing some new things and if I add index++ in the "startQuiz" function it moves to the next question as expected, but then it doesn't track which button was pressed, which makes sense at the moment as the other function "quizQuestions" isn't functioning yet. I think I may have to change the function used for the addEventListener when it does.*
+2. *I tried using the function but the scores stays at "1" no matter which button I click.*
+3. *Buttons changes name now with innerText so that's good to see.
