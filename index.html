@@ -6,11 +6,14 @@
 <h1 id="scoreOutput"></h1>
 
 <button id="start">Start quiz</button>
+<div>
 <button id="button1"></button>
 <button id="button2"></button>
+</div>
+<div>
 <button id="button3"></button>
 <button id="button4"></button>
-
+</div>
 
 <!-- start of the script -->
 <script>
@@ -46,14 +49,14 @@ var questions = [
     "What is two plus two?"
 ];
 
-// all answers
+// all answers (in a nested array)
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"]
 ];
 
 // all correct answers
-// Reminder for myself next time: make the correct answer be written exactly as the answer so double equal sign '==' works to compare them
+
 var correctAnswers = ["Two", "Four"];
 
 
@@ -64,14 +67,16 @@ hideButtons();
 function startQuiz() {
 if (index < questions.length) {
     output.innerHTML = questions[index];
-    // Trying to make the answers appear for the buttons
+    // Trying to make the answers appear again
     showButtons();
+    // innerText for the buttons to change them with index var and each index number
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
     button4.innerText = answers[index][3];
-    //showButtons();
+    // showButtons();
     start.style.display = "none";
+    // index++ to update the question and button answers
     index++;
     quizQuestions();
 }
@@ -86,9 +91,12 @@ else {
 
 // Gonna attempt to make a function that checks the users input/specific button clicked and score++ if it's correct
 // And move to the next question.
-function quizQuestions(userInput) {
-    if (userInput == correctAnswers[index]) {
+function quizQuestions(userClick) {
+    
+    console.log("Checking: " + userClick);
+    if (userClick == correctAnswers[index]) {
         score++;
+        index++;
     }
 }
 
@@ -100,12 +108,12 @@ function hideButtons() {
     button3.style.display = "none";
     button4.style.display = "none";
 }
-// function to make the buttons appear again for restarting quiz later
+// function to make the buttons appear again
 function showButtons() {
-    button1.style.display = "block";
-    button2.style.display = "block";
-    button3.style.display = "block";
-    button4.style.display = "block";
+    button1.style.display = "inline-block";
+    button2.style.display = "inline-block";
+    button3.style.display = "inline-block";
+    button4.style.display = "inline-block";
 }
 
 // function to show the score at some point (if it's correct)

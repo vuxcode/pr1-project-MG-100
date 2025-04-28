@@ -19,3 +19,9 @@ so some kind of error occurred.
 - 2025-04-12 18:15-18:30. *I fixed the problem and now it does start again when I click on start but the 4 other buttons for answers are not connected yet to questions/correctAnswers*
 
 - 2025-04-23 15:30-15:40 *Trying to make my quiz function properly. If I put the function 'quizQuestions() at the bottom of the other function 'startQuiz' the score in the end stays at 1 no matter what buttons were clicked. Trying to fix it. Also still have no clue yet on how to make the buttons appear horizontally instead of vertically but that still looks fine to me.*
+
+- 2025-04-28 10:15-10:50
+1. Fixed the "problem" where the buttons aligned vertically by using "inline-block instead of just block"
+
+- 2025-04-28 10:15-11:00
+1. I have a problem with the quizQuestions function and using console.log it shows undefined

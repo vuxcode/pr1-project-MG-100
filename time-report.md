@@ -105,3 +105,9 @@ For example:
 1. *Testing some new things and if I add index++ in the "startQuiz" function it moves to the next question as expected, but then it doesn't track which button was pressed, which makes sense at the moment as the other function "quizQuestions" isn't functioning yet. I think I may have to change the function used for the addEventListener when it does.*
 2. *I tried using the function but the scores stays at "1" no matter which button I click.*
 3. *Buttons changes name now with innerText so that's good to see.
+
+
+
+2025-04-28 10:15-10:50
+1. *Added "in-line" to the showButtons function with help from Collin. I remembered to use it as well. It fixed the alignment of the buttons*
+2. *Got help to use 'div' for the buttons to align them in more of a way that I wanted to from the start.*
