@@ -25,3 +25,6 @@ so some kind of error occurred.
 
 - 2025-04-28 10:15-11:00
 1. I have a problem with the quizQuestions function and using console.log it shows undefined
+- 2025-04-28 11:00-11:40 
+1. I fixed a problem for the this. property where it was showing which button was pressed, but due to using index++ in the showQuestions
+function as well as in 'startQuiz' it was showing the wrong number, two as six for example. Now it shows what button was pressed correctly.

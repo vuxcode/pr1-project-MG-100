@@ -111,3 +111,5 @@ For example:
 2025-04-28 10:15-10:50
 1. *Added "in-line" to the showButtons function with help from Collin. I remembered to use it as well. It fixed the alignment of the buttons*
 2. *Got help to use 'div' for the buttons to align them in more of a way that I wanted to from the start.*
+2025-04-28 11:00-11:40
+1. *Using the 'this' property with innerText to show which button was pressed inside the console.log*

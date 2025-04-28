@@ -34,7 +34,7 @@ button4.addEventListener("click", startQuiz);
 
 // Variable for score and I want it to be score++ for each question that is correct
 var score = 0;
-// Index starting from 0 here to output first question (questions[0] and then questions[1]) 
+// Index number starting at 0
 var index = 0;
 
 //outputs for questions and score
@@ -65,6 +65,9 @@ hideButtons();
 
 // Start of the function (quizQuestions)
 function startQuiz() {
+    // CHECK WHAT THE TEXT IS ON THE BUTTON THAT WAS CLICKED!
+    console.log(this.innerText);
+
 if (index < questions.length) {
     output.innerHTML = questions[index];
     // Trying to make the answers appear again
@@ -74,7 +77,7 @@ if (index < questions.length) {
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
     button4.innerText = answers[index][3];
-    // showButtons();
+    // hiding the start button
     start.style.display = "none";
     // index++ to update the question and button answers
     index++;
@@ -82,8 +85,10 @@ if (index < questions.length) {
 }
 
 else {
+    // When the quiz ends
     output.innerHTML = "Quiz is over!"
     hideButtons();
+    // Show the final score
     showScore();
 }
 }
@@ -95,13 +100,14 @@ function quizQuestions(userClick) {
     
     console.log("Checking: " + userClick);
     if (userClick == correctAnswers[index]) {
+        console.log(correctAnswers[index]);
+        console.log("Adding one point!");
         score++;
-        index++;
     }
 }
 
 
-// function to hide the buttons
+// function to hide the answer buttons
 function hideButtons() {
     button1.style.display = "none";
     button2.style.display = "none";
