@@ -26,5 +26,8 @@ so some kind of error occurred.
 - 2025-04-28 10:15-11:00
 1. I have a problem with the quizQuestions function and using console.log it shows undefined
 - 2025-04-28 11:00-11:40 
-1. I fixed a problem for the this. property where it was showing which button was pressed, but due to using index++ in the showQuestions
+1. I fixed a problem for the 'this' where it was showing which button was pressed, but due to using index++ in the showQuestions
 function as well as in 'startQuiz' it was showing the wrong number, two as six for example. Now it shows what button was pressed correctly.
+
+- 2025-05-04
+1. Still working on the issue where my 'userClick' parameter/variable is undefined and it can't track which button was pressed. With this.innerText in the startQuiz function it's showing me in the console log that for any button that was clicked it's adding one point which should be incorrect and for the final button that I click, it doesn't show me undefined?

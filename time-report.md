@@ -108,8 +108,14 @@ For example:
 
 
 
-2025-04-28 10:15-10:50
+- 2025-04-28 10:15-10:50
 1. *Added "in-line" to the showButtons function with help from Collin. I remembered to use it as well. It fixed the alignment of the buttons*
 2. *Got help to use 'div' for the buttons to align them in more of a way that I wanted to from the start.*
 2025-04-28 11:00-11:40
 1. *Using the 'this' property with innerText to show which button was pressed inside the console.log*
+
+
+
+- 2025-05-04 yesterday (2 hours) & today (14:00 to around 15:00)
+1. I forgot to log the exact times but I spent close to two hours yesterday and one hour today looking at my code and reading through lesson notes. I did make some changes but I decided to go back to the same version as before.
+2. I can see that the 'userClick' variable/parameter is undefined and the 'start quiz' as well since it is outside the function I believe so it isn't assigned to a value or it can't be found inside the function. It also says 'adding one point' for clicking on any button which shouldn't be correct. Working hard on trying to fix it.
