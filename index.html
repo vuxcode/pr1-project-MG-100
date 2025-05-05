@@ -70,17 +70,17 @@ function startQuiz() {
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
-    // Trying to make the answers appear again
-    showButtons();
     // hiding the start button
     start.style.display = "none";
+    // Making the answer buttons appear
+    showButtons();
     // innerText for the buttons to change them with the index var and each index number
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
     button4.innerText = answers[index][3];
     // index++ to update the question and button answers
-    index++;
+    //index++;
     console.log("index is: " + index);
     answerClicked();
 }
@@ -97,10 +97,11 @@ else {
 
 // Making the function to see which button was clicked and if it was correct or not (working on it still)
 function answerClicked(userClick) {
-    
-    console.log("Checking: " + userClick);
+    userClick = correctAnswers[index];
+    console.log("Checking userClick parameter/var: " + userClick);
     if (userClick == correctAnswers[index]) {
-        console.log(correctAnswers[index]);
+        index++;
+        console.log("correctAnswers index: " + correctAnswers[index]);
         console.log("Adding one point!");
         score++;
     }

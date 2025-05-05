@@ -123,5 +123,6 @@ For example:
 
 
 - 2025-05-05 06:20-06:45
-1. Changed the 'showQuestion' function name to 'answerClicked' it made more sense to me and I am working on making
-that function work. I can see in the console that when I press start, it shows that index is 1 and when I press any of the four buttons that appear after start, it shows index 2 and on the final click it doesn't show me any index number at all. The 'userClick' parameter is still undefined also so I need to assign it somehow while figuring out the index.
+1. *Changed the 'showQuestion' function name to 'answerClicked' it made more sense to me and I am working on making*
+that function work. I can see in the console that when I press start, it shows that index is 1 and when I press any of the four buttons that* *appear after start, it shows index 2 and on the final click it doesn't show me any index number at all. The 'userClick' parameter is still undefined also so I need to assign it somehow while figuring out the index.*
+2. Same day from around 07:00-07:40. - *At least in the beginning now, userClic parameter isn't undefined, but it still is for the last button/answer if clicked.*
