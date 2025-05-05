@@ -72,16 +72,17 @@ if (index < questions.length) {
     output.innerHTML = questions[index];
     // Trying to make the answers appear again
     showButtons();
-    // innerText for the buttons to change them with index var and each index number
+    // hiding the start button
+    start.style.display = "none";
+    // innerText for the buttons to change them with the index var and each index number
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
     button4.innerText = answers[index][3];
-    // hiding the start button
-    start.style.display = "none";
     // index++ to update the question and button answers
     index++;
-    quizQuestions();
+    console.log("index is: " + index);
+    answerClicked();
 }
 
 else {
@@ -94,9 +95,8 @@ else {
 }
 //End of this function
 
-// Gonna attempt to make a function that checks the users input/specific button clicked and score++ if it's correct
-// And move to the next question.
-function quizQuestions(userClick) {
+// Making the function to see which button was clicked and if it was correct or not (working on it still)
+function answerClicked(userClick) {
     
     console.log("Checking: " + userClick);
     if (userClick == correctAnswers[index]) {
@@ -126,6 +126,7 @@ function showButtons() {
 function showScore() {
 scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 }
+
 
 
 // Checking the .length of these arrays

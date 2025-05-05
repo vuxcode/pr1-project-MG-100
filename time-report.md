@@ -119,3 +119,9 @@ For example:
 - 2025-05-04 yesterday (2 hours) & today (14:00 to around 15:00)
 1. I forgot to log the exact times but I spent close to two hours yesterday and one hour today looking at my code and reading through lesson notes. I did make some changes but I decided to go back to the same version as before.
 2. I can see that the 'userClick' variable/parameter is undefined and the 'start quiz' as well since it is outside the function I believe so it isn't assigned to a value or it can't be found inside the function. It also says 'adding one point' for clicking on any button which shouldn't be correct. Working hard on trying to fix it.
+
+
+
+- 2025-05-05 06:20-06:45
+1. Changed the 'showQuestion' function name to 'answerClicked' it made more sense to me and I am working on making
+that function work. I can see in the console that when I press start, it shows that index is 1 and when I press any of the four buttons that appear after start, it shows index 2 and on the final click it doesn't show me any index number at all. The 'userClick' parameter is still undefined also so I need to assign it somehow while figuring out the index.
