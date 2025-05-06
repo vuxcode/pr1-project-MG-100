@@ -126,3 +126,8 @@ For example:
 1. *Changed the 'showQuestion' function name to 'answerClicked' it made more sense to me and I am working on making*
 that function work. I can see in the console that when I press start, it shows that index is 1 and when I press any of the four buttons that* *appear after start, it shows index 2 and on the final click it doesn't show me any index number at all. The 'userClick' parameter is still undefined also so I need to assign it somehow while figuring out the index.*
 2. Same day from around 07:00-07:40. - *At least in the beginning now, userClic parameter isn't undefined, but it still is for the last button/answer if clicked.*
+
+
+
+- 2025-05-06 22:00-23:00
+1. I have tried changing a lot of things in both functions, yesterday as well but I forgot to log it. I can see that when I press the start button, the index starts at 0 in the console log. I haven't updated any changes as I haven't gotten any closer but I am trying a lot of different things to hopefully make it work. It still shows "2 correct answers" at the end even when they are false. I am going to the lesson tomorrow and hopefully I can get some guidance.
