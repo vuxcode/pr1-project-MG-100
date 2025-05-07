@@ -131,3 +131,9 @@ that function work. I can see in the console that when I press start, it shows t
 
 - 2025-05-06 22:00-23:00
 1. I have tried changing a lot of things in both functions, yesterday as well but I forgot to log it. I can see that when I press the start button, the index starts at 0 in the console log. I haven't updated any changes as I haven't gotten any closer but I am trying a lot of different things to hopefully make it work. It still shows "2 correct answers" at the end even when they are false. I am going to the lesson tomorrow and hopefully I can get some guidance.
+
+
+
+- 2025-05-07 12:30-13:40
+1. Asked Collin about some tips and I seem to be getting closer to making it work.
+2. Trying to fix the parameter.
