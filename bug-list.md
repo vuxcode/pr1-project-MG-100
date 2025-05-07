@@ -31,3 +31,6 @@ function as well as in 'startQuiz' it was showing the wrong number, two as six f
 
 - 2025-05-04
 1. Still working on the issue where my 'userClick' parameter/variable is undefined and it can't track which button was pressed. With this.innerText in the startQuiz function it's showing me in the console log that for any button that was clicked it's adding one point which should be incorrect and for the final button that I click, it doesn't show me undefined?
+
+- 25-05-08 23:00-00:30
+1. I experimented many different ways and after getting some help with the parameter problem, the index seems to be following better. It can only go to the next question now if I click on the correct answer but I think I can fix this with an else statement. Line 71 console.log(this.innerText) is showing as undefined

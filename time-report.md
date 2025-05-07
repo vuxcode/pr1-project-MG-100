@@ -137,3 +137,10 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-07 12:30-13:40
 1. Asked Collin about some tips and I seem to be getting closer to making it work.
 2. Trying to fix the parameter.
+
+
+
+- 2025-05-08 for about an hour and a half, experimenting many things again.
+1. I made a function that shows the questions "showQuestions()"
+2. Now it only goes to the next question if I click on the correct question and the index seems to be following better! However, console.log(this.innerText) is now showing as undefined on line 71. I will go to the workshop lesson tomorrow as well and ask for some insight/tips from Collin again.
+3. Updated some comments/documentation to make it clearer to read

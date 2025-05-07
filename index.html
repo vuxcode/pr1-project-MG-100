@@ -20,7 +20,7 @@
 // Start quiz button
 var start = document.getElementById("start");
 start.addEventListener("click", startQuiz);
-// Added buttons and IDs to start working out on how to connect them to each question (might need more later)
+// Added buttons and IDs to the buttons with the 'startQuiz' function.
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
@@ -32,57 +32,51 @@ button4.addEventListener("click", startQuiz);
 
 
 
-// Variable for score and I want it to be score++ for each question that is correct
+// Global variable for score and I want it to be score++ for each question that is correct.
 var score = 0;
-// Index number starting at 0
+// Global index variable starting at 0.
 var index = 0;
 
-//outputs for questions and score
+// Output variable and ID for the  QUESTIONS.
 var output = document.getElementById("questions");
-// Need to use scoreOutput later in the code for correct answers
+// Output variable and ID for the SCORE (Correct answers counter).
 var scoreOutput = document.getElementById("scoreOutput");
 
 
-// questions (temporary ones will change them later when I have a connection to the buttons)
+// Array with ALL QUESTIONS. (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
     "What is one plus one?",
     "What is two plus two?"
 ];
 
-// all answers (in a nested array)
+// ALL ANSWERS (in a nested array) for me to track the index easier.
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"]
 ];
 
-// all correct answers
-
+// Array with All CORRECT ANSWERS.
 var correctAnswers = ["Two", "Four"];
 
 
 
-// Hiding the 'answer' buttons in the beginning
+// HIDING the 'answer' buttons in the beginning with this function.
 hideButtons();
 
 
-// Start of the function (quizQuestions)
+// START of the Quiz using this function (startQuiz)
 function startQuiz() {
     // CHECK WHAT THE TEXT IS ON THE BUTTON THAT WAS CLICKED!
     console.log(this.innerText);
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
-    // hiding the start button
+    // Hiding the START button after clicking on start.
     start.style.display = "none";
     // Making the answer buttons appear
     showButtons();
     // innerText for the buttons to change them with the index and each index number
-    button1.innerText = answers[index][0];
-    button2.innerText = answers[index][1];
-    button3.innerText = answers[index][2];
-    button4.innerText = answers[index][3];
-    // index++ to update the question and button answers
-    //index++;
+    showQuestions();
     console.log("index is: " + index);
     // COLIN: I THINK YOU WANT TO GIVE THE NEXT FUNCTION AN INPUT PARAMETER
     answerClicked(this.innerText);
@@ -101,27 +95,29 @@ else {
 // Making the function to see which button was clicked and if it was correct or not (working on it still)
 function answerClicked(userClick) {
     // COLIN: I THINK YOU'RE TRYING TO ASSIGN THE "userClick" VARIABLE BUT YOU WANT TO USE THE INPUT PARAMETER FROM THE PLACE WHERE THE FUNCTION IS USED... BUT I DON'T KNOW WHY YOU WOULD WANT TO DO THIS?
-    //userClick = correctAnswers[index];
 
-    console.log("Checking userClick parameter/var: " + userClick);
     // COLIN: THIS WILL ALWAYS BE TRUE IN THIS CASE!!!
     if (userClick == correctAnswers[index]) {
-        index++;
-        score++;
         console.log("correctAnswers index: " + correctAnswers[index]);
         console.log("Adding one point!");
+        console.log("Checking userClick parameter/var: " + userClick);
+        // Index++ to go to the next question and correct answer.
+        index++;
+        score++;
+        // Running startQuiz() function here. (This fixed the need to click on two buttons to get to the next question, for now)
+        startQuiz();
     }
 }
 
 
-// function to hide the answer buttons
+// Function to HIDE the answer BUTTONS
 function hideButtons() {
     button1.style.display = "none";
     button2.style.display = "none";
     button3.style.display = "none";
     button4.style.display = "none";
 }
-// function to make the buttons appear again
+// Function to SHOW the BUTTONS again
 function showButtons() {
     button1.style.display = "inline-block";
     button2.style.display = "inline-block";
@@ -129,14 +125,22 @@ function showButtons() {
     button4.style.display = "inline-block";
 }
 
-// function to show the score at some point (if it's correct)
+// Function to SHOW the QUESTIONS with index
+function showQuestions() {
+    button1.innerText = answers[index][0];
+    button2.innerText = answers[index][1];
+    button3.innerText = answers[index][2];
+    button4.innerText = answers[index][3];
+}
+
+// Function to SHOW the SCORE at the end of the quiz (if it's working correctly).
 function showScore() {
 scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 }
 
 
 
-// Checking the .length of these arrays
+// Checking the .length of these arrays.
 console.log("CorrectAnswers.length: " + correctAnswers.length);
 console.log("answers.length: " + answers.length);
 console.log("Questions.length: " + questions.length);
