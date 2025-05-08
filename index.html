@@ -80,6 +80,7 @@ if (index < questions.length) {
     console.log("index is: " + index);
     // COLIN: I THINK YOU WANT TO GIVE THE NEXT FUNCTION AN INPUT PARAMETER
     answerClicked(this.innerText);
+
 }
 
 else {
@@ -97,7 +98,7 @@ function answerClicked(userClick) {
     // COLIN: I THINK YOU'RE TRYING TO ASSIGN THE "userClick" VARIABLE BUT YOU WANT TO USE THE INPUT PARAMETER FROM THE PLACE WHERE THE FUNCTION IS USED... BUT I DON'T KNOW WHY YOU WOULD WANT TO DO THIS?
 
     // COLIN: THIS WILL ALWAYS BE TRUE IN THIS CASE!!!
-    if (userClick == correctAnswers[index]) {
+    if (userClick === correctAnswers[index]) {
         console.log("correctAnswers index: " + correctAnswers[index]);
         console.log("Adding one point!");
         console.log("Checking userClick parameter/var: " + userClick);
@@ -107,10 +108,14 @@ function answerClicked(userClick) {
         // Running startQuiz() function here. (This fixed the need to click on two buttons to get to the next question, for now)
         startQuiz();
     }
+    else {
+        // If the wrong answer was pressed.
+        console.log("Incorrect answer.");
+    }
 }
 
 
-// Function to HIDE the answer BUTTONS
+// Function to HIDE the BUTTONS
 function hideButtons() {
     button1.style.display = "none";
     button2.style.display = "none";
@@ -137,7 +142,6 @@ function answerOptions() {
 function showScore() {
 scoreOutput.innerHTML = "You guessed: " + score + " questions correctly!";
 }
-
 
 
 // Checking the .length of these arrays.
