@@ -76,7 +76,7 @@ if (index < questions.length) {
     // Making the answer buttons appear
     showButtons();
     // innerText for the buttons to change them with the index and each index number
-    showQuestions();
+    answerOptions();
     console.log("index is: " + index);
     // COLIN: I THINK YOU WANT TO GIVE THE NEXT FUNCTION AN INPUT PARAMETER
     answerClicked(this.innerText);
@@ -125,8 +125,8 @@ function showButtons() {
     button4.style.display = "inline-block";
 }
 
-// Function to SHOW the QUESTIONS with index
-function showQuestions() {
+// Function to SHOW the 4 ANSWER options with index
+function answerOptions() {
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
     button3.innerText = answers[index][2];
