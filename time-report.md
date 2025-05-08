@@ -141,9 +141,10 @@ that function work. I can see in the console that when I press start, it shows t
 
 
 - 2025-05-08 for about an hour and a half, experimenting many things again.
-1. I made a function that shows the questions "showQuestions()"
-2. Now it only goes to the next question if I click on the correct question and the index seems to be following better! However, console.log(this.innerText) is now showing as undefined on line 71. I will go to the workshop lesson tomorrow as well and ask for some insight/tips from Collin again.
-3. Updated some comments/documentation to make it clearer to read
+1. *I made a function that shows the questions "showQuestions()"*
+2. *Now it only goes to the next question if I click on the correct question and the index seems to be following better! However, console.log(this.innerText) is now showing as undefined on line 71. I will go to the workshop lesson tomorrow as well and ask for some insight/tips from Collin again.*
+3. *Updated some comments/documentation to make it clearer to read*
 
 - 2025-05-08 12:30-14:10 (workshop) and for like 30 minutes at home so far.
-1. I added an else statement if the correct question isn't clicked, but it will only go to the next question if I click on the correct one. I tried putting index++ there as well, but then no matter what button I click the total score shows as 0 in the end. Trying to fix it now.
+1. *I added an else statement if the correct question isn't clicked, but it will only go to the next question if I click on the correct one. I tried putting index++ there as well, but then no matter what button I click the total score shows as 0 in the end. Trying to fix it now.*
+2. 18:00-19:00 *I tried so many different things but at the moment I feel stuck with it... so I am going back to trying with this version.*
