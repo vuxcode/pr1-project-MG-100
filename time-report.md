@@ -148,3 +148,9 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-08 12:30-14:10 (workshop) and for like 30 minutes at home so far.
 1. *I added an else statement if the correct question isn't clicked, but it will only go to the next question if I click on the correct one. I tried putting index++ there as well, but then no matter what button I click the total score shows as 0 in the end. Trying to fix it now.*
 2. 18:00-19:00 *I tried so many different things but at the moment I feel stuck with it... so I am going back to trying with this version.*
+
+- 2025-05-09 23:00 - 01:30 + another hour or two ish during mid day.
+1. *My code is now tracking which button was pressed and if it was correct/incorrect!! I used event in my function parameter 'answerClicked(event) and then assigned userClick to event.target.innerText (property) to track it. I remember that this was showcased shortly in one of the lessons by Colin and I browsed for more information. I was so surprised to finally see it working. I put index++ to increment underneath the if/else statements so it does it either way and called the startQuiz function after that.*
+2. I also changed the eventListeners to the answerClicked function for it to work.
+3. *I am soooo happy that this is finally working! Spent so many hours getting this part to work!*
+4. *Next thing I will try to do is the restart button after the quiz end, for the user to have a chance to try it again. If I can get that working, I will add serious questions/answers to the current placeholders for testing.*

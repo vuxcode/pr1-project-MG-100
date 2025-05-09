@@ -35,5 +35,8 @@ function as well as in 'startQuiz' it was showing the wrong number, two as six f
 - 2025-05-08 23:00-00:30
 1. I experimented many different ways and after getting some help with the parameter problem, the index seems to be following better. It can only go to the next question now if I click on the correct answer but I think I can fix this with an else statement. Line 71 console.log(this.innerText) is showing as undefined
 
-- 2025-05-8 12:30-14:10 (workshop) + 30 minutes at home so far
-1. I have a bug where the "score" or correct answers rather, shows as 0 in the end no matter what. Working on it.
+- 2025-05-08 12:30-14:10 (workshop) + 30 minutes at home so far
+1. I have a bug where the "score" or correct answers rather, shows as 0 in the end no matter what. Working on it. 
+
+- 2025-05-09 23:00-01:30
+1. I fixed the bug above by using the event.target property and I also changed the addEventListener buttons to my 'answerClicked' function instead to make it work as well. I also did some small changes to other things and I had to move the index++ to increment both if the correct/incorrect answer was clicked and called for the startQuiz function after it. Happy with this progress finally!
