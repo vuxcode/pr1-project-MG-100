@@ -74,47 +74,55 @@ if (index < questions.length) {
     start.style.display = "none";
     // Making the answer buttons appear
     showButtons();
-    // innerText for the buttons to change them with the index and each index number
+    // Calling the answerOptions function to make the answer options appear and work as intended
     answerOptions();
     console.log("index is: " + index);
-    // COLIN: I THINK YOU WANT TO GIVE THE NEXT FUNCTION AN INPUT PARAMETER
 }
 
 else {
     // When the quiz ends
     output.innerHTML = "Quiz is over!"
     hideButtons();
-    // Show the final score
+    // Show the final score/correct answers
     showScore();
 }
 }
-//End of this function
+// End of this function
 
-// Making the function to see which button was clicked and if it was correct or not (working on it still)
+// Function to track which button was clicked with 'event' as parameter
 function answerClicked(event) {
-    // COLIN: I THINK YOU'RE TRYING TO ASSIGN THE "userClick" VARIABLE BUT YOU WANT TO USE THE INPUT PARAMETER FROM THE PLACE WHERE THE FUNCTION IS USED... BUT I DON'T KNOW WHY YOU WOULD WANT TO DO THIS?
-    // COLIN: THIS WILL ALWAYS BE TRUE IN THIS CASE!!!
-    // Assigned userClick to event.target.innerText to track which question was presssed
+
+    // Assigned userClick variable to event.target.innerText properties to track which question was presssed and if it's correct/incorrect
+    // (I have eventListeners with this function for my 4 answer buttons)
     var userClick = event.target.innerText;
+    // If userClick is the same as correctAnswers index
     if (userClick == correctAnswers[index]) {
+        // Checking some console messages to see what's happening/what was clicked. Some might be repeated multiple times currently.
         console.log("Checking the event.target: " + event.target.innerText);
         console.log("correctAnswers index: " + correctAnswers[index]);
         console.log("Checking userClick parameter/var: " + userClick);
-        // Index++ to go to the next question and correct answer.
+        // Updating/incrementing the score (correct answers counter) if correct
         score++;
         console.log("Current score/correct answers: " + score);
-        // Running startQuiz() function here. (This fixed the need to click on two buttons to get to the next question, for now)
     }
     else {
-        // If the wrong answer was pressed.
+        // If the wrong answer button was clicked. (userClick !== correctAnswers[index])
         console.log("Incorrect answer.");
+        // Still tracking the score/correct answer in console if it was incorrect
         console.log("Current score/correct answers: " + score);
     }
     // Incrementing by 1 with index++ whether the answer is correct or not.
     index++;
-    // Running the startQuiz function to make it run and get to the next questions/answers
+    // Calling the startQuiz function to make it run and get to the next questions/answers and the end
     startQuiz();
     // This currently works!!!
+}
+// End of this function
+
+
+// Working on the restartQuiz() function
+function restartQuiz() {
+
 }
 
 
@@ -134,7 +142,7 @@ function showButtons() {
     button4.style.display = "inline-block";
 }
 
-// Function to SHOW the 4 ANSWER options with index
+// Function to SHOW the 4 ANSWER options with index + innerText so they get updated
 function answerOptions() {
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];

@@ -154,3 +154,9 @@ that function work. I can see in the console that when I press start, it shows t
 2. I also changed the eventListeners to the answerClicked function for it to work.
 3. *I am soooo happy that this is finally working! Spent so many hours getting this part to work!*
 4. *Next thing I will try to do is the restart button after the quiz end, for the user to have a chance to try it again. If I can get that working, I will add serious questions/answers to the current placeholders for testing.*
+
+
+
+- 2025-05-09 17:15-17:35
+1. *I changed some documentation to make it easier to read and also for the presentation*
+2. *I created a restartQuiz() function but it's empty right now. I have to study for a math test but I will try my best to continue with it later and during the weekend.*
