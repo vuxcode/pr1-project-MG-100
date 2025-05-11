@@ -160,3 +160,8 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-09 17:15-17:35
 1. *I changed some documentation to make it easier to read and also for the presentation*
 2. *I created a restartQuiz() function but it's empty right now. I have to study for a math test but I will try my best to continue with it later and during the weekend.*
+
+- 2025-05-11 - around 10-15 minutes
+1. (reading through my code/changing some documentation to make it easier for me to read during the presentation and working with the code).
+2. Gonna continue working on the restartQuiz function.
+3. Added another question, answers on the buttons and a correct answer in the arrays to check that it still works that way.

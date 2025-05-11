@@ -46,17 +46,19 @@ var scoreOutput = document.getElementById("scoreOutput");
 // Array with ALL QUESTIONS. (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
     "What is one plus one?",
-    "What is two plus two?"
+    "What is two plus two?",
+    "What is one plus eight?"
 ];
 
 // ALL ANSWERS (in a nested array) for me to track the index easier.
 var answers = [
     ["One", "Two", "Three", "Four"],
-    ["Five", "Six", "Four", "Three"]
+    ["Five", "Six", "Four", "Three"],
+    ["Eight", "Seven", "Four", "Nine"]
 ];
 
 // Array with All CORRECT ANSWERS.
-var correctAnswers = ["Two", "Four"];
+var correctAnswers = ["Two", "Four", "Nine"];
 
 
 // HIDING the 'answer' buttons in the beginning with this function.
@@ -82,6 +84,7 @@ if (index < questions.length) {
 else {
     // When the quiz ends
     output.innerHTML = "Quiz is over!"
+    // Hiding the buttons after the final question
     hideButtons();
     // Show the final score/correct answers
     showScore();
@@ -92,7 +95,7 @@ else {
 // Function to track which button was clicked with 'event' as parameter
 function answerClicked(event) {
 
-    // Assigned userClick variable to event.target.innerText properties to track which question was presssed and if it's correct/incorrect
+    // Assigned userClick as a variable to event.target.innerText properties. Target is supposedt to track which button was clicked with innerText and if it's the same as correctAnswers[index]
     // (I have eventListeners with this function for my 4 answer buttons)
     var userClick = event.target.innerText;
     // If userClick is the same as correctAnswers index
@@ -111,7 +114,7 @@ function answerClicked(event) {
         // Still tracking the score/correct answer in console if it was incorrect
         console.log("Current score/correct answers: " + score);
     }
-    // Incrementing by 1 with index++ whether the answer is correct or not.
+    // Incrementing by 1 with index++ whether the answer is correct or not outside the if/else statements.
     index++;
     // Calling the startQuiz function to make it run and get to the next questions/answers and the end
     startQuiz();
@@ -122,6 +125,8 @@ function answerClicked(event) {
 
 // Working on the restartQuiz() function
 function restartQuiz() {
+// I want to reset the index to 0 with the restart function
+// Score reset to 0 as well and clear any other messages to what it is in the beginning of the start
 
 }
 
