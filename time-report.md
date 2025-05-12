@@ -165,3 +165,8 @@ that function work. I can see in the console that when I press start, it shows t
 1. (reading through my code/changing some documentation to make it easier for me to read during the presentation and working with the code).
 2. Gonna continue working on the restartQuiz function.
 3. Added another question, answers on the buttons and a correct answer in the arrays to check that it still works that way.
+
+
+
+- 2025-05-11 - Forgot to log. I spent all the time in the workshop working on my restart button & function to work + around 30 minutes at home. Had to study for the math test again as well.
+1. I managed to make the restart button appear after clicking on the final button, and after clicking on the restart button, the restart button goes away and the first question begins from the start with the score/correct answers + index set to 0.

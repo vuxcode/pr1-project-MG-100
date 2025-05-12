@@ -76,6 +76,8 @@ function startQuiz() {
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
+    hideRestartBtn();
+    scoreOutput.innerHTML = "";
     // Hiding the START button after clicking on start.
     start.style.display = "none";
     // Making the answer buttons appear
