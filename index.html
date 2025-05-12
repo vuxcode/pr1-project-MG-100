@@ -1,4 +1,5 @@
 <!-- Start writing your project code in this file! -->
+<meta name="color-scheme" content="dark">
 
 <h1> This is a quiz </h1>
 
@@ -21,7 +22,7 @@
 // Start quiz button
 var start = document.getElementById("start");
 start.addEventListener("click", startQuiz);
-// Restart quiz button
+// Restart quiz button (using my startQuiz function to run it again)
 var restartQ = document.getElementById("restart");
 restartQ.addEventListener("click", startQuiz);
 // Added buttons and IDs to the buttons with the 'startQuiz' function.
@@ -36,7 +37,7 @@ button4.addEventListener("click", answerClicked);
 
 
 
-// Global variable for score and I want it to be score++ for each question that is correct.
+// Global 'score' variable for counting the correct answers
 var score = 0;
 // Global index variable starting at 0.
 var index = 0;
@@ -45,7 +46,6 @@ var index = 0;
 var output = document.getElementById("questions");
 // Output variable and ID for the SCORE (Correct answers counter).
 var scoreOutput = document.getElementById("scoreOutput");
-
 
 // Array with ALL QUESTIONS. (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
@@ -76,6 +76,7 @@ function startQuiz() {
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
+    // Hiding the restart button (again) otherwise it still appears after clicking on the restart quiz button
     hideRestartBtn();
     scoreOutput.innerHTML = "";
     // Hiding the START button after clicking on start.
@@ -94,6 +95,7 @@ else {
     hideButtons();
     // Show the final score/correct answers
     showScore();
+    // Calling the restartQuiz function
     restartQuiz();
 }
 }
@@ -110,45 +112,42 @@ function answerClicked(event) {
         // Checking some console messages to see what's happening/what was clicked. Some might be repeated multiple times currently.
         console.log("Checking the event.target: " + event.target.innerText);
         console.log("correctAnswers index: " + correctAnswers[index]);
-        console.log("Checking userClick parameter/var: " + userClick);
         // Updating/incrementing the score (correct answers counter) if correct
         score++;
-        console.log("Current score/correct answers: " + score);
+        console.log("Correct. Current score/correct answers: " + score);
     }
+    
+    // If the wrong answer button was clicked
     else {
-        // If the wrong answer button was clicked. (userClick !== correctAnswers[index])
-        console.log("Incorrect answer.");
         // Still tracking the score/correct answer in console if it was incorrect
-        console.log("Current score/correct answers: " + score);
+        console.log("Incorrect. Current score/correct answers: " + score);
     }
-    // Incrementing by 1 with index++ whether the answer is correct or not outside the if/else statements.
+    // Incrementing by 1 with index++ to get the next question/answer buttons
     index++;
-    // Calling the startQuiz function to make it run and get to the next questions/answers and the end
+    //Calling the startQuiz function to make it run and get to the next questions/answers and the end
     startQuiz();
-    // This currently works!!!
 }
 // End of this function
 
 
 // Working on the restartQuiz() function
 function restartQuiz() {
+    // When index is >= questions.length it will show the restart button and set index and score to 0 again
 if (index >= questions.length) {
     showRestartBtn();
     index = 0;
     score = 0;
-    console.log("After all answers clicked index:" + index);
+    console.log("After all answers clicked index: " + index);
 }
-
-// I want to reset the index to 0 with the restart function
-// Score reset to 0 as well and clear any other messages to what it is in the beginning of the start
 
 }
 
-
+// Function to SHOW the restart button
 function showRestartBtn() {
 restartQ.style.display = "inline-block";
 }
 
+// Function to HIDE the restart button
 function hideRestartBtn() {
 restartQ.style.display = "none";
 }
@@ -180,7 +179,7 @@ function answerOptions() {
 
 // Function to SHOW the SCORE at the end of the quiz (if it's working correctly).
 function showScore() {
-scoreOutput.innerHTML = "You answered: " + score + " questions correctly!";
+scoreOutput.innerHTML = "You answered " + score + " questions correctly!";
 }
 
 // Checking the .length of these arrays.
