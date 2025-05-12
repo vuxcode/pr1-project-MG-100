@@ -6,6 +6,7 @@
 <h1 id="scoreOutput"></h1>
 
 <button id="start">Start quiz</button>
+<button id="restart">Restart quiz</button>
 <div>
 <button id="button1"></button>
 <button id="button2"></button>
@@ -20,6 +21,9 @@
 // Start quiz button
 var start = document.getElementById("start");
 start.addEventListener("click", startQuiz);
+// Restart quiz button
+var restartQ = document.getElementById("restart");
+restartQ.addEventListener("click", startQuiz);
 // Added buttons and IDs to the buttons with the 'startQuiz' function.
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
@@ -63,12 +67,12 @@ var correctAnswers = ["Two", "Four", "Nine"];
 
 // HIDING the 'answer' buttons in the beginning with this function.
 hideButtons();
-
+// Hiding the restart button (should only appear at the end)
+hideRestartBtn();
 
 // START of the Quiz using this function (startQuiz)
 function startQuiz() {
     // CHECK WHAT THE TEXT IS ON THE BUTTON THAT WAS CLICKED!
-    console.log(this.innerText);
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
@@ -88,6 +92,7 @@ else {
     hideButtons();
     // Show the final score/correct answers
     showScore();
+    restartQuiz();
 }
 }
 // End of this function
@@ -125,9 +130,25 @@ function answerClicked(event) {
 
 // Working on the restartQuiz() function
 function restartQuiz() {
+if (index >= questions.length) {
+    showRestartBtn();
+    index = 0;
+    score = 0;
+    console.log("After all answers clicked index:" + index);
+}
+
 // I want to reset the index to 0 with the restart function
 // Score reset to 0 as well and clear any other messages to what it is in the beginning of the start
 
+}
+
+
+function showRestartBtn() {
+restartQ.style.display = "inline-block";
+}
+
+function hideRestartBtn() {
+restartQ.style.display = "none";
 }
 
 
