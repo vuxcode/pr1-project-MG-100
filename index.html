@@ -111,7 +111,7 @@ function answerClicked(event) {
     if (userClick == correctAnswers[index]) {
         // Checking some console messages to see what's happening/what was clicked. Some might be repeated multiple times currently.
         console.log("Checking the event.target: " + event.target.innerText);
-        console.log("correctAnswers index: " + correctAnswers[index]);
+        console.log("Checking the correctAnswers array: " + correctAnswers[index]);
         // Updating/incrementing the score (correct answers counter) if correct
         score++;
         console.log("Correct. Current score/correct answers: " + score);
@@ -137,7 +137,6 @@ if (index >= questions.length) {
     showRestartBtn();
     index = 0;
     score = 0;
-    console.log("After all answers clicked index: " + index);
 }
 
 }

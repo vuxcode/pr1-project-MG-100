@@ -171,3 +171,8 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-12 - Forgot to log. I spent all the time in the workshop working on my restart button & function to work + around 30 minutes at home. Had to study for the math test again as well.
 1. I managed to make the restart button appear after clicking on the final button, and after clicking on the restart button, the restart button goes away and the first question begins from the start with the score/correct answers + index set to 0.
 2. Continued around midnight, changed some documentation/texts mostly to improve the readability for myself. Thinking about what to add as questions too and I will write them down and then add them to my quiz. Finally added dark mode
+
+
+
+- 2025-05-13 (about 5-10 minutes)
+1. Small changes to console logs/texts
