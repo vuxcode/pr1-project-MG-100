@@ -1,10 +1,10 @@
 <!-- Start writing your project code in this file! -->
 <meta name="color-scheme" content="dark">
 
-<h1> This is a quiz </h1>
+<h1 id="quizIntroMessage"></h1>
 
-<h1 id="questions"></h1>
 <h1 id="scoreOutput"></h1>
+<h1 id="questions"></h1>
 
 <button id="start">Start quiz</button>
 <button id="restart">Restart quiz</button>
@@ -19,6 +19,8 @@
 
 <!-- start of the script -->
 <script>
+// Message that appears above the start button when it's loaded the first time
+var quizIntro = document.getElementById("quizIntroMessage")
 // Start quiz button
 var start = document.getElementById("start");
 start.addEventListener("click", startQuiz);
@@ -34,6 +36,7 @@ button1.addEventListener("click", answerClicked);
 button2.addEventListener("click", answerClicked);
 button3.addEventListener("click", answerClicked);
 button4.addEventListener("click", answerClicked);
+
 
 
 
@@ -65,10 +68,15 @@ var answers = [
 var correctAnswers = ["Two", "Four", "Nine"];
 
 
+
+
 // HIDING the 'answer' buttons in the beginning with this function.
 hideButtons();
 // Hiding the restart button (should only appear at the end)
 hideRestartBtn();
+// Showing the 'intro' message before clicking on the 'start quiz' button
+quizIntroMessage();
+
 
 // START of the Quiz using this function (startQuiz)
 function startQuiz() {
@@ -76,8 +84,10 @@ function startQuiz() {
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
+    hideIntroMessage();
     // Hiding the restart button (again) otherwise it still appears after clicking on the restart quiz button
     hideRestartBtn();
+    // Clearing the previous correct answers after 'restart' is clicked
     scoreOutput.innerHTML = "";
     // Hiding the START button after clicking on start.
     start.style.display = "none";
@@ -87,19 +97,20 @@ if (index < questions.length) {
     answerOptions();
     console.log("index is: " + index);
 }
-
 else {
     // When the quiz ends
-    output.innerHTML = "Quiz is over!"
+    output.innerHTML = "Quiz is over! Click on restart if you wanna try again.";
     // Hiding the buttons after the final question
     hideButtons();
     // Show the final score/correct answers
-    showScore();
+    showScore();;
     // Calling the restartQuiz function
     restartQuiz();
 }
 }
 // End of this function
+
+
 
 // Function to track which button was clicked with 'event' as parameter
 function answerClicked(event) {
@@ -141,6 +152,19 @@ if (index >= questions.length) {
 
 }
 
+
+// Function to show the message in the beginning before pressing 'start quiz' button
+function quizIntroMessage() {
+quizIntro.innerHTML = "Click the button when ready to start the quiz!";
+}
+
+
+// Function to hide the same message as above after pressing 'start quiz' button
+function hideIntroMessage() {
+quizIntro.innerHTML = "";
+}
+
+
 // Function to SHOW the restart button
 function showRestartBtn() {
 restartQ.style.display = "inline-block";
@@ -160,6 +184,7 @@ function hideButtons() {
     button4.style.display = "none";
 }
 
+
 // Function to SHOW the BUTTONS again
 function showButtons() {
     button1.style.display = "inline-block";
@@ -167,6 +192,7 @@ function showButtons() {
     button3.style.display = "inline-block";
     button4.style.display = "inline-block";
 }
+
 
 // Function to SHOW the 4 ANSWER options with index + innerText so they get updated
 function answerOptions() {
@@ -176,12 +202,23 @@ function answerOptions() {
     button4.innerText = answers[index][3];
 }
 
-// Function to SHOW the SCORE at the end of the quiz (if it's working correctly).
+
+// Function to SHOW the SCORE at the end of the quiz
 function showScore() {
-scoreOutput.innerHTML = "You answered " + score + " questions correctly!";
+scoreOutput.innerHTML = score + "/" + questions.length + " all answers were correct. Great job!";
+if (score >= questions.length) {
+    scoreOutput.innerHTML
+}
+else if (score <= 0){
+    scoreOutput.innerHTML = score + "/" + questions.length + " answers were correct. You'll do better next time!";
+}
+else {
+    scoreOutput.innerHTML = score + "/" + questions.length + " answers were correct!";
+}
 }
 
-// Checking the .length of these arrays.
+
+// Checking the .length of these arrays
 console.log("CorrectAnswers.length: " + correctAnswers.length);
 console.log("answers.length: " + answers.length);
 console.log("Questions.length: " + questions.length);
