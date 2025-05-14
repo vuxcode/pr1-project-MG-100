@@ -184,3 +184,5 @@ that function work. I can see in the console that when I press start, it shows t
 1. Just changed some // texts and moved a few functions at the bottom but not where they are being called
 2. Shortly after changed a few texts again. I want it saved and uploaded to github before the workshop time ends so I can continue at home
 3. Going home now from the workshop so I want to upload it a last time to make sure I didn't miss anything. Talked to Colin about trying to make each answer/answer buttons random so it's more fun to restart it each time, so I will try to work on that and hopefully make it work.
+(Same day around 18:45-19:15)
+1. I made a random number generator variable and used it in arrays and made it work! (currently only using it one time for testing) however, when I restart the quiz, it doesn't generate a new random number.. only after restarting the page.

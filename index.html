@@ -40,8 +40,8 @@ button2.addEventListener("click", answerClicked);
 button3.addEventListener("click", answerClicked);
 button4.addEventListener("click", answerClicked);
 
-
-
+// Random number generator
+var randomNumber = Math.floor(Math.random() * 5) +1;
 
 // Global 'score' variable for counting the correct answers
 var score = 0;
@@ -57,18 +57,20 @@ var scoreOutput = document.getElementById("scoreOutput");
 var questions = [
     "What is one plus one?",
     "What is two plus two?",
-    "What is one plus eight?"
+    "What is one plus eight?",
+    "What is " + randomNumber + "+" + 12
 ];
 
 // ALL ANSWERS (in a NESTED array) for me to track the index easier and track the correct answers
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
-    ["Eight", "Seven", "Four", "Nine"]
+    ["Eight", "Seven", "Four", "Nine"],
+    [7, 5, 9, randomNumber + 12]
 ];
 
 // Array with All CORRECT ANSWERS.
-var correctAnswers = ["Two", "Four", "Nine"];
+var correctAnswers = ["Two", "Four", "Nine", randomNumber + 12];
 
 
 
@@ -86,6 +88,7 @@ function startQuiz() {
     // If index is less than questions.length output the questions[index]
 if (index < questions.length) {
     output.innerHTML = questions[index];
+    
     // Hiding the 'intro message' which appears above the start button when the page has just been loaded/opened
     hideIntroMessage();
     // Hiding the RESTART button (again) otherwise it still appears after clicking on the restart quiz button above the answer buttons
@@ -107,7 +110,7 @@ else {
     // Hiding the buttons after the final question
     hideButtons();
     // Show the final score/correct answers
-    showScore();;
+    showScore();
     // Calling the restartQuiz function
     restartQuiz();
 }
@@ -155,6 +158,7 @@ if (index >= questions.length) {
     // Setting index and score/correct answers counter back to 0
     index = 0;
     score = 0;
+    randomNumber = Math.floor(Math.random() * 5) +1;
 }
 }
 
