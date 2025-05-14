@@ -182,3 +182,4 @@ that function work. I can see in the console that when I press start, it shows t
 
 - 2025-05-14 (About 40 minutes in the workshop)
 1. Just changed some // texts and moved a few functions at the bottom but not where they are being called
+2. Shortly after changed a few texts again. I want it saved and uploaded to github before the workshop time ends so I can continue at home

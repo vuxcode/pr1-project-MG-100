@@ -1,11 +1,12 @@
 <!-- Start writing your project code in this file! -->
 <meta name="color-scheme" content="dark">
 
+<!-- Texts -->
 <h1 id="quizIntroMessage"></h1>
-
 <h1 id="scoreOutput"></h1>
 <h1 id="questions"></h1>
 
+<!-- Buttons -->
 <button id="start">Start quiz</button>
 <button id="restart">Restart quiz</button>
 <div>
@@ -19,6 +20,7 @@
 
 <!-- start of the script -->
 <script>
+
 // Message that appears above the start button when it's loaded the first time
 var quizIntro = document.getElementById("quizIntroMessage")
 // Start quiz button
@@ -136,9 +138,9 @@ function answerClicked(event) {
         console.log("Incorrect. Current score/correct answers: " + score);
     }
     // Incrementing by 1 with index++ to get the next question/answer buttons
-    index++;
+        index++;
     //Calling the startQuiz function to make it run and get to the next questions/answers and reach the end
-    startQuiz();
+        startQuiz();
 }
 // End of this function
 
