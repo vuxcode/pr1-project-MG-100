@@ -30,7 +30,7 @@ start.addEventListener("click", startQuiz);
 var restartQ = document.getElementById("restart");
 // (Using my startQuiz function here to run it again)
 restartQ.addEventListener("click", startQuiz);
-// Added buttons and IDs to the buttons with the 'startQuiz' function
+// Added buttons and IDs to the buttons with the 'answerClicked' function
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
@@ -48,9 +48,9 @@ var score = 0;
 // Global index variable starting at 0
 var index = 0;
 
-// Output variable and ID for the  QUESTIONS.
+// Output variable and ID for the  QUESTIONS
 var output = document.getElementById("questions");
-// Output variable and ID for the SCORE (Correct answers counter).
+// Output variable and ID for the SCORE (Correct answers counter)
 var scoreOutput = document.getElementById("scoreOutput");
 
 // Array with ALL QUESTIONS. (temporary ones will change them later when I have a connection to the buttons)
@@ -60,7 +60,7 @@ var questions = [
     "What is one plus eight?"
 ];
 
-// ALL ANSWERS (in a nested array) for me to track the index easier.
+// ALL ANSWERS (in a NESTED array) for me to track the index easier and track the correct answers
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
@@ -73,22 +73,22 @@ var correctAnswers = ["Two", "Four", "Nine"];
 
 
 
-// HIDING the 'answer' buttons in the beginning with this function
+// HIDING the 'ANSWER BUTTONS' in the beginning with this function
 hideButtons();
-// Hiding the restart button so it doesn't appear directly after loading the browser
+// HIDING the RESTART BUTTON so it doesn't appear directly after loading the browser
 hideRestartBtn();
-// Showing the 'intro' message before clicking on the 'start quiz' button
+// SHOWING the 'intro MESSAGE' before clicking on the 'start quiz' button
 quizIntroMessage();
 
 
-// START of the Quiz using this function (startQuiz)
+// START of the Quiz using this function and calling other functions
 function startQuiz() {
-
+    // If index is less than questions.length output the questions[index]
 if (index < questions.length) {
     output.innerHTML = questions[index];
     // Hiding the 'intro message' which appears above the start button when the page has just been loaded/opened
     hideIntroMessage();
-    // Hiding the restart button (again) otherwise it still appears after clicking on the restart quiz button above the answer buttons
+    // Hiding the RESTART button (again) otherwise it still appears after clicking on the restart quiz button above the answer buttons
     hideRestartBtn();
     // Clearing the previous correct answers after 'restart' button was clicked
     hideScore();
@@ -116,10 +116,11 @@ else {
 
 
 
-// Function to track which button was clicked with 'event' as parameter
+// Function to track which button/answer that was clicked with 'event' as parameter
 function answerClicked(event) {
 
-    // Assigned userClick as a variable to event.target.innerText properties. Target is supposedt to track which button was clicked with innerText and if it's the same as correctAnswers[index]
+    // Assigned userClick as a variable to event.target.innerText and using those properties. Target is supposed to track which button was clicked with innerText and if it's the same as correctAnswers[index]. I also check that it works in the console.
+
     // (I have eventListeners with this function for my 4 answer buttons)
     var userClick = event.target.innerText;
     // If userClick is the same as correctAnswers index
@@ -134,7 +135,7 @@ function answerClicked(event) {
     
     // If the wrong answer button was clicked
     else {
-        // Still tracking the score/correct answer in console if it was incorrect
+    // Still tracking the score/correct answer in console if it was incorrect
         console.log("Incorrect. Current score/correct answers: " + score);
     }
     // Incrementing by 1 with index++ to get the next question/answer buttons
@@ -155,7 +156,6 @@ if (index >= questions.length) {
     index = 0;
     score = 0;
 }
-
 }
 
 
