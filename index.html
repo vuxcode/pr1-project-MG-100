@@ -24,10 +24,11 @@ var quizIntro = document.getElementById("quizIntroMessage")
 // Start quiz button
 var start = document.getElementById("start");
 start.addEventListener("click", startQuiz);
-// Restart quiz button (using my startQuiz function to run it again)
+// Restart quiz button
 var restartQ = document.getElementById("restart");
+// (Using my startQuiz function here to run it again)
 restartQ.addEventListener("click", startQuiz);
-// Added buttons and IDs to the buttons with the 'startQuiz' function.
+// Added buttons and IDs to the buttons with the 'startQuiz' function
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
@@ -42,7 +43,7 @@ button4.addEventListener("click", answerClicked);
 
 // Global 'score' variable for counting the correct answers
 var score = 0;
-// Global index variable starting at 0.
+// Global index variable starting at 0
 var index = 0;
 
 // Output variable and ID for the  QUESTIONS.
@@ -70,9 +71,9 @@ var correctAnswers = ["Two", "Four", "Nine"];
 
 
 
-// HIDING the 'answer' buttons in the beginning with this function.
+// HIDING the 'answer' buttons in the beginning with this function
 hideButtons();
-// Hiding the restart button (should only appear at the end)
+// Hiding the restart button so it doesn't appear directly after loading the browser
 hideRestartBtn();
 // Showing the 'intro' message before clicking on the 'start quiz' button
 quizIntroMessage();
@@ -80,25 +81,26 @@ quizIntroMessage();
 
 // START of the Quiz using this function (startQuiz)
 function startQuiz() {
-    // CHECK WHAT THE TEXT IS ON THE BUTTON THAT WAS CLICKED!
 
 if (index < questions.length) {
     output.innerHTML = questions[index];
+    // Hiding the 'intro message' which appears above the start button when the page has just been loaded/opened
     hideIntroMessage();
-    // Hiding the restart button (again) otherwise it still appears after clicking on the restart quiz button
+    // Hiding the restart button (again) otherwise it still appears after clicking on the restart quiz button above the answer buttons
     hideRestartBtn();
-    // Clearing the previous correct answers after 'restart' is clicked
-    scoreOutput.innerHTML = "";
-    // Hiding the START button after clicking on start.
-    start.style.display = "none";
+    // Clearing the previous correct answers after 'restart' button was clicked
+    hideScore();
+    // Hiding the START button after the 'start' button was clicked
+    hideStartBtn();
     // Making the answer buttons appear
     showButtons();
     // Calling the answerOptions function to make the answer options appear and work as intended
     answerOptions();
+    // Keeping track of the current index #
     console.log("index is: " + index);
 }
 else {
-    // When the quiz ends
+    // After the last answer button was clicked
     output.innerHTML = "Quiz is over! Click on restart if you wanna try again.";
     // Hiding the buttons after the final question
     hideButtons();
@@ -120,10 +122,10 @@ function answerClicked(event) {
     var userClick = event.target.innerText;
     // If userClick is the same as correctAnswers index
     if (userClick == correctAnswers[index]) {
-        // Checking some console messages to see what's happening/what was clicked. Some might be repeated multiple times currently.
+        // Checking some console messages to see what's happening & which button was clicked and if it's compared correctly
         console.log("Checking the event.target: " + event.target.innerText);
         console.log("Checking the correctAnswers array: " + correctAnswers[index]);
-        // Updating/incrementing the score (correct answers counter) if correct
+        // Updating/incrementing the score (correct answer counter) by +1 if it was correct
         score++;
         console.log("Correct. Current score/correct answers: " + score);
     }
@@ -135,7 +137,7 @@ function answerClicked(event) {
     }
     // Incrementing by 1 with index++ to get the next question/answer buttons
     index++;
-    //Calling the startQuiz function to make it run and get to the next questions/answers and the end
+    //Calling the startQuiz function to make it run and get to the next questions/answers and reach the end
     startQuiz();
 }
 // End of this function
@@ -143,9 +145,11 @@ function answerClicked(event) {
 
 // Working on the restartQuiz() function
 function restartQuiz() {
-    // When index is >= questions.length it will show the restart button and set index and score to 0 again
+    // When index is more than or equal to questions.length it will show the restart button
 if (index >= questions.length) {
+    // Show the restart button then
     showRestartBtn();
+    // Setting index and score/correct answers counter back to 0
     index = 0;
     score = 0;
 }
@@ -153,13 +157,13 @@ if (index >= questions.length) {
 }
 
 
-// Function to show the message in the beginning before pressing 'start quiz' button
+// Function to SHOW the message in the beginning before pressing 'start quiz' button
 function quizIntroMessage() {
 quizIntro.innerHTML = "Click the button when ready to start the quiz!";
 }
 
 
-// Function to hide the same message as above after pressing 'start quiz' button
+// Function to HIDE the same message as above after pressing 'start quiz' button
 function hideIntroMessage() {
 quizIntro.innerHTML = "";
 }
@@ -170,9 +174,16 @@ function showRestartBtn() {
 restartQ.style.display = "inline-block";
 }
 
-// Function to HIDE the restart button
+
+// Function to HIDE the RESTART button
 function hideRestartBtn() {
 restartQ.style.display = "none";
+}
+
+
+// Function to HIDE the START button
+function hideStartBtn() {
+start.style.display = "none";
 }
 
 
@@ -194,7 +205,7 @@ function showButtons() {
 }
 
 
-// Function to SHOW the 4 ANSWER options with index + innerText so they get updated
+// Function to SHOW the 4 answer options with index + innerText so they get updated
 function answerOptions() {
     button1.innerText = answers[index][0];
     button2.innerText = answers[index][1];
@@ -203,24 +214,32 @@ function answerOptions() {
 }
 
 
+// Function to HIDE the score/correct answers
+function hideScore() {
+scoreOutput.innerHTML = "";
+}
+
+
 // Function to SHOW the SCORE at the end of the quiz
 function showScore() {
-scoreOutput.innerHTML = score + "/" + questions.length + " all answers were correct. Great job!";
+// (If all the answers were correct)
 if (score >= questions.length) {
-    scoreOutput.innerHTML
+scoreOutput.innerHTML = score + "/" + questions.length + " all answers were correct. Great job!";
 }
+// (If all the answers were incorrect)
 else if (score <= 0){
     scoreOutput.innerHTML = score + "/" + questions.length + " answers were correct. You'll do better next time!";
 }
+// (If at least one question was correct)
 else {
     scoreOutput.innerHTML = score + "/" + questions.length + " answers were correct!";
 }
 }
 
 
-// Checking the .length of these arrays
+// Checking the .length of these arrays to make sure they are the same for my code
 console.log("CorrectAnswers.length: " + correctAnswers.length);
-console.log("answers.length: " + answers.length);
+console.log("Answers.length: " + answers.length);
 console.log("Questions.length: " + questions.length);
 
 </script>

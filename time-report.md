@@ -177,3 +177,8 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-13 (about 5-10 minutes)
 1. Small changes to console logs/texts
 2. Same day for another hour or so. Changed some things in the showScore function, created a couple new functions for when the page is first loaded before clicking on the start button. Texts changed a bit as well.
+
+
+
+- 2025-05-14 (About 40 minutes in the workshop)
+1. Just changed some // texts and moved a few functions at the bottom but not where they are being called
