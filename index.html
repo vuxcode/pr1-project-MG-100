@@ -59,7 +59,7 @@ var questions = [
     "What is one plus one?",
     "What is two plus two?",
     "What is one plus eight?",
-    "What is " + randomNumber + "+" + 12 + "?"
+    "What is " + randomNumber + "+" + randomNumber + "?"
 ];
 
 // ALL ANSWERS (in a NESTED array) for me to track the index easier and track the correct answers
@@ -67,20 +67,18 @@ var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
     ["Eight", "Seven", "Four", "Nine"],
-    [randomNumber, randomNumber, randomNumber, randomNumber + 12]
+    [randomNumber, randomNumber, randomNumber, randomNumber + randomNumber]
 ];
 
 // Array with All CORRECT ANSWERS.
-var correctAnswers = ["Two", "Four", "Nine", randomNumber + 12];
+var correctAnswers = ["Two", "Four", "Nine", randomNumber + randomNumber];
 
 
 
 function resetRandomNum () {
-    questions[3] = "What is " + randomNumber + "+" + 12;
-    answers[3] = [randomNumber, randomNumber, randomNumber, randomNumber + 12];
-    correctAnswers[3] = [randomNumber + 12];
-    //questions[3] = "What is " + randomNumber + "+" + randomNumber;
-    //answers[3] = [randomNumber, randomNumber, randomNumber, randomNumber + 12] 
+    questions[3] = "What is " + randomNumber + "+" + randomNumber;
+    answers[3] = [randomNumber, randomNumber, randomNumber, randomNumber + randomNumber];
+    correctAnswers[3] = [randomNumber + randomNumber];
 }
 
 
@@ -171,7 +169,7 @@ if (index >= questions.length) {
     randomNumber = Math.floor(Math.random() * 5) +1;
     resetRandomNum();
     // After the random number has been generated THEN you could update the question
-    //questions[3] = "What is " + randomNumber + "+" + 12;
+    questions[3] = "What is " + randomNumber + "+" + randomNumber;
 
 }
 }

@@ -191,3 +191,4 @@ that function work. I can see in the console that when I press start, it shows t
 
 - 2025-05-15 (during the workshop)
 1. Trying to get random questions to work each time the quiz is restarted
+2. Same day (for about 2h) - Still trying my best to get the random numbers to work
