@@ -195,3 +195,4 @@ that function work. I can see in the console that when I press start, it shows t
 3. Trying a different approach with two different random number generators. It is tedious to get this to work and it looks cluttered, but at least I can get it to work I think! I don't know how I am going to randomize the click sequence like this though..
 4. Another hour or so - I am able to generate random numbers now for each question and answer buttons, but to change the click sequence and randomize it seems very difficult for me to do before the deadline unfortunately.. the way I used to generate the random numbers is pretty tedious and it looks cluttered/DRY, but at least it works so far.
 5. Made all of the questions/answer options generate random numbers now
+6. Moved some functions to a better position (for me)
