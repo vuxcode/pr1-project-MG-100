@@ -192,3 +192,4 @@ that function work. I can see in the console that when I press start, it shows t
 - 2025-05-15 (during the workshop)
 1. Trying to get random questions to work each time the quiz is restarted
 2. Same day (for about 2h) - Still trying my best to get the random numbers to work
+3. Trying a different approach with two different random number generators. It is tedious to get this to work and it looks cluttered, but at least I can get it to work I think! I don't know how I am going to randomize the click sequence like this though..

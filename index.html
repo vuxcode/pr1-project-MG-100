@@ -40,8 +40,9 @@ button2.addEventListener("click", answerClicked);
 button3.addEventListener("click", answerClicked);
 button4.addEventListener("click", answerClicked);
 
-// Random number generator
-var randomNumber = Math.floor(Math.random() * 5) +1;
+// Random number generators
+var randomNum1 = Math.floor(Math.random() * 100) +15;
+var randomNum2 = Math.floor(Math.random() * 100) +15;
 // Global 'score' variable for counting the correct answers
 var score = 0;
 // Global index variable starting at 0
@@ -59,7 +60,7 @@ var questions = [
     "What is one plus one?",
     "What is two plus two?",
     "What is one plus eight?",
-    "What is " + randomNumber + "+" + randomNumber + "?"
+    "What is " + randomNum1 + "+" + randomNum2 + "?"
 ];
 
 // ALL ANSWERS (in a NESTED array) for me to track the index easier and track the correct answers
@@ -67,18 +68,26 @@ var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
     ["Eight", "Seven", "Four", "Nine"],
-    [randomNumber, randomNumber, randomNumber, randomNumber + randomNumber]
+    [randomNum1 * 2, randomNum2 *3, randomNum1 *3, randomNum1 + randomNum2]
 ];
 
 // Array with All CORRECT ANSWERS.
-var correctAnswers = ["Two", "Four", "Nine", randomNumber + randomNumber];
+var correctAnswers = ["Two", "Four", "Nine", randomNum1 + randomNum2];
 
 
 
 function resetRandomNum () {
+    
+    randomNum1 = Math.floor(Math.random() * 100) +15;
+    randomNum2 = Math.floor(Math.random() * 100) +15;
+
+
+
+
+
     questions[3] = "What is " + randomNumber + "+" + randomNumber;
-    answers[3] = [randomNumber, randomNumber, randomNumber, randomNumber + randomNumber];
-    correctAnswers[3] = [randomNumber + randomNumber];
+    answers[3] = [randomNum1 *2, randomNum2 *3, randomNum1 *3, randomNum1 + randomNum2];
+    correctAnswers[3] = [randomNum1 + randomNum2];
 }
 
 
@@ -166,10 +175,10 @@ if (index >= questions.length) {
     // Setting index and score/correct answers counter back to 0
     index = 0;
     score = 0;
-    randomNumber = Math.floor(Math.random() * 5) +1;
+    randomNumber = Math.floor(Math.random() * 100) +15;
     resetRandomNum();
     // After the random number has been generated THEN you could update the question
-    questions[3] = "What is " + randomNumber + "+" + randomNumber;
+    questions[3] = "What is " + randomNum1 + "+" + randomNum2 + "?";
 
 }
 }
