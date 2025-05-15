@@ -58,8 +58,8 @@ var scoreOutput = document.getElementById("scoreOutput");
 // Array with ALL QUESTIONS. (temporary ones will change them later when I have a connection to the buttons)
 var questions = [
     "What is one plus one?",
-    "What is two plus two?",
-    "What is one plus eight?",
+    "What is " + randomNum1 *2 + "+" + randomNum2 *2 + "?",
+    "What is " + randomNum1 *2 + "+" + randomNum2 + "?",
     "What is " + randomNum1 + "+" + randomNum2 + "?"
 ];
 
@@ -67,27 +67,45 @@ var questions = [
 var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
-    ["Eight", "Seven", "Four", "Nine"],
-    [randomNum1 * 2, randomNum2 *3, randomNum1 *3, randomNum1 + randomNum2]
+    [randomNum1 * 2, randomNum2 *3, randomNum1 *3, randomNum1 + randomNum2],
+    [randomNum1 * 2, randomNum2 *3, randomNum1 *3, randomNum1 *2 + randomNum2]
 ];
 
 // Array with All CORRECT ANSWERS.
-var correctAnswers = ["Two", "Four", "Nine", randomNum1 + randomNum2];
+var correctAnswers = ["Two", "Four", randomNum1 *2 + randomNum2, randomNum1 + randomNum2];
 
 
 
-function resetRandomNum () {
-    
+
+function resetRandomNum1() {
+
+
+
+
+}
+
+
+
+function resetRandomNum2() {
+    // Setting the random numbers
+    randomNum1 = Math.floor(Math.random() * 100) +15;
+    randomNum2 = Math.floor(Math.random() * 100) +15;
+
+    questions[2] = "What is " + randomNum1 *2 + "+" + randomNum2;
+    answers[2] = [randomNum1 * 2, randomNum1 *2 + randomNum2, randomNum2 *3, randomNum1 *3];
+    correctAnswers[2] = randomNum1 *2 + randomNum2;
+}
+
+function resetRandomNum3() {
+    // Setting the random numbers
     randomNum1 = Math.floor(Math.random() * 100) +15;
     randomNum2 = Math.floor(Math.random() * 100) +15;
 
 
 
-
-
-    questions[3] = "What is " + randomNumber + "+" + randomNumber;
+    questions[3] = "What is " + randomNum1 + "+" + randomNum2;
     answers[3] = [randomNum1 *2, randomNum2 *3, randomNum1 *3, randomNum1 + randomNum2];
-    correctAnswers[3] = [randomNum1 + randomNum2];
+    correctAnswers[3] = randomNum1 + randomNum2;
 }
 
 
@@ -97,7 +115,9 @@ hideButtons();
 hideRestartBtn();
 // SHOWING the 'intro MESSAGE' before clicking on the 'start quiz' button
 quizIntroMessage();
-
+// Calling the resetRandomNum functions here, otherwise there will be incorrect outputs
+resetRandomNum2();
+resetRandomNum3();
 
 // START of the Quiz using this function and calling other functions
 function startQuiz() {
@@ -175,10 +195,12 @@ if (index >= questions.length) {
     // Setting index and score/correct answers counter back to 0
     index = 0;
     score = 0;
-    randomNumber = Math.floor(Math.random() * 100) +15;
-    resetRandomNum();
+    resetRandomNum2();
     // After the random number has been generated THEN you could update the question
+    questions[2] = "What is " + randomNum1 *2 + "+" + randomNum2 + "?";
+    resetRandomNum3();
     questions[3] = "What is " + randomNum1 + "+" + randomNum2 + "?";
+    
 
 }
 }
