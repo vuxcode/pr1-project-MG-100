@@ -42,11 +42,12 @@ button4.addEventListener("click", answerClicked);
 
 // Random number generator
 var randomNumber = Math.floor(Math.random() * 5) +1;
-
 // Global 'score' variable for counting the correct answers
 var score = 0;
 // Global index variable starting at 0
 var index = 0;
+// Temp
+var temp = 0;
 
 // Output variable and ID for the  QUESTIONS
 var output = document.getElementById("questions");
@@ -58,7 +59,7 @@ var questions = [
     "What is one plus one?",
     "What is two plus two?",
     "What is one plus eight?",
-    "What is " + randomNumber + "+" + 12
+    "What is " + randomNumber + "+" + 12 + "?"
 ];
 
 // ALL ANSWERS (in a NESTED array) for me to track the index easier and track the correct answers
@@ -66,13 +67,19 @@ var answers = [
     ["One", "Two", "Three", "Four"],
     ["Five", "Six", "Four", "Three"],
     ["Eight", "Seven", "Four", "Nine"],
-    [7, 5, 9, randomNumber + 12]
+    [randomNumber, randomNumber, randomNumber, randomNumber + 12]
 ];
 
 // Array with All CORRECT ANSWERS.
 var correctAnswers = ["Two", "Four", "Nine", randomNumber + 12];
 
 
+
+function resetRandomNum () {
+    questions[3] = "What is " + randomNumber + "+" + 12;
+    //questions[3] = "What is " + randomNumber + "+" + randomNumber;
+    //answers[3] = [randomNumber, randomNumber, randomNumber, randomNumber + 12] 
+}
 
 
 // HIDING the 'ANSWER BUTTONS' in the beginning with this function
@@ -141,7 +148,7 @@ function answerClicked(event) {
     // Still tracking the score/correct answer in console if it was incorrect
         console.log("Incorrect. Current score/correct answers: " + score);
     }
-    // Incrementing by 1 with index++ to get the next question/answer buttons
+    // Incrementing the index by 1 with index++ to get the next question/answer buttons
         index++;
     //Calling the startQuiz function to make it run and get to the next questions/answers and reach the end
         startQuiz();
@@ -159,6 +166,10 @@ if (index >= questions.length) {
     index = 0;
     score = 0;
     randomNumber = Math.floor(Math.random() * 5) +1;
+    resetRandomNum();
+    // After the random number has been generated THEN you could update the question
+    //questions[3] = "What is " + randomNumber + "+" + 12;
+
 }
 }
 
