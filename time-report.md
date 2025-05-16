@@ -196,3 +196,6 @@ that function work. I can see in the console that when I press start, it shows t
 4. Another hour or so - I am able to generate random numbers now for each question and answer buttons, but to change the click sequence and randomize it seems very difficult for me to do before the deadline unfortunately.. the way I used to generate the random numbers is pretty tedious and it looks cluttered/DRY, but at least it works so far.
 5. Made all of the questions/answer options generate random numbers now
 6. Moved some functions to a better position (for me)
+
+- 2025-05-16 (Worked on my code during the workshop and several hours at home, forgot to track it accurately)
+1. I tried my best to use for loops to make the code less repetitive, but at least now by calling functions, it still looks clearer then previously and is easier to read. I might make more changes later but overall I am quite happy with it!
