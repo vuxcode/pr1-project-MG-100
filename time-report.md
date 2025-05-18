@@ -199,3 +199,6 @@ that function work. I can see in the console that when I press start, it shows t
 
 - 2025-05-16 (Worked on my code during the workshop and several hours at home, forgot to track it accurately)
 1. I tried my best to use for loops to make the code less repetitive, but at least now by calling functions, it still looks clearer then previously and is easier to read. I might make more changes later but overall I am quite happy with it!
+
+- 2025-05-18 21:10-22:10
+1. I tried to improve my code/program during the weekend but I couldn't do much more to it besides changing a few things. I am still happy that I have followed the biggest parts of my plan, though! I will work on improvements in the future for myself. I might continue a bit before going to bed as the presentation is tomorrow.
