@@ -15,7 +15,8 @@ The final program is not the goal! The aim of the project is to show how you hav
 arrays to buttons and show the buttons dynamically and the questions as well.
 2. 2025/03/26 removed some of the code to test more things one step at a time and trying to make it less confusing for myself.
 3. ^ Just realized I didn't update this part enough but I used the time-report mostly.
-4. 2025-05-19 I finished my presentation today, I felt a bit nervous at first but then I got into it and it felt good. 
+4. 2025-05-19 I finished my presentation today, I felt a bit nervous at first but then I got into it and it felt good.
+5. I have taken a look through everything again and I feel happy with my final version. Of course there are things that could be a lot better but I'm still positive about all the things I have learned on this course and for me it was a nice challenge & experience. I am not sure if I will make any further changes to my current code now. I will work on some smaller programs on the side, so only if I can get something to work before the 9th of June I will update it.
 
 
 > Before the final submission date you should include a "PROJECT SUMMARY" in this section here.

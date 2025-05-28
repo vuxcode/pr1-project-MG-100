@@ -224,3 +224,6 @@ that function work. I can see in the console that when I press start, it shows t
 
 - **2025-05-18 21:10-22:10 - (1 hour)**
 1. I tried to improve my code/program during the weekend but I couldn't do much more to it besides changing a few things. I am still happy that I have followed the biggest parts of my plan, though! I will work on improvements in the future for myself. I might continue a bit before going to bed as the presentation is tomorrow.
+
+**2025-05-28 - checked my code and project summary**
+1. I just took a look at my code again and was trying to think if I could make any immediate changes to it, but I think I am happy at this point. I mentioned in the read-me file that I will still work on some smaller programs for fun and learning, so if I come up with any new ideas that can help me elevate this current version I will update it before the 9th of June, so hopefully everything goes well!
